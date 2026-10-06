@@ -1,0 +1,1127 @@
+
+
+<!-----------------------------Information Technology----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Information.com</title>
+
+  <link rel="stylesheet" href="Services.css">
+  <script src="script.js"></script>
+
+    
+
+
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+
+
+<!----  <meta http-equiv="content-type" content="text/html; charset=utf-8" />   ------>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link herf=" https//www.Information.com">
+<link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<a href="https://wa.me/971527442274?text=Hello%20I%20would%20like%20more%20information" class="whatsapp-icon" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://github.com/PHPMailer/PHPMailer/archive/refs/heads/master.zip"></a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+      padding-top: 130px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      
+      background: linear-gradient(270deg, #000, #1270e3, #000, #1270e3);
+      background-size: 400% 400%;
+      animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #fff;
+      font-size:25px;
+  font-weight: 600;
+      cursor: pointer;
+      left:0;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+
+      /* ANIMATION */
+      animation: floatLogo 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(18, 112, 227, 0.9));
+      transition: transform 0.6s ease;
+    }
+
+    /* Floating animation */
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Rotate on hover */
+    .logo:hover img {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    /* MENU */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      padding: 5px 0;
+      nav-right: 30%;
+    }
+  .nav-menu a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width:50%;
+        
+        background: linear-gradient(270deg, #043df7, #1270e3, #0764ce, #1270e3);
+        flex-direction: column;
+        align-items:center;
+        display: none;
+        padding: 20px 0;
+        border-radius: 50px;
+
+        animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+    
+  </style>
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+      <span>Information<br>Technology</span>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="Home.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="About.html"><i class="fa fa-graduation-cap"></i> About</a></li>
+      <li><a href="Services.html"><i class="fa-brands fa-servicestack"></i> Services</a></li>
+      <li><a href="Contact.html"><i class="fa fa-id-card"></i> Contact</a></li>
+      <li><a href="Course.html"><i class="fas fa-laptop-code"></i> Course</a></li>
+      
+    </ul>
+
+  </nav>
+
+  <!-- JS -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("nav-menu");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+<!--------------------------------------- End Fixed Navbar------------------------------------------------->
+
+
+
+<!---------------------------Services Section------------------------------>
+<!-- Font Awesome for modern icons -->
+
+
+<section id="Services">
+
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+   
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 40px 20px;
+ 
+}
+
+/* GRID */
+.cards-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 15%;
+  padding-bottom: 10%
+}
+
+/* CARD */
+.card {
+  position: relative;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 800px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* HIDDEN RADIO FOR MOBILE TAP */
+.card input {
+  display: none;
+}
+
+/* FRONT */
+.card-front {
+  height: 100%;
+  background: linear-gradient(135deg,  #04b5eb,#034ee4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-front .icon {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.card-front h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* OVERLAY BACK */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(135deg,  #fff,#0313fc);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* DESKTOP HOVER EFFECT */
+@media (hover: hover) {
+  .card:hover .card-front {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+  }
+  .card:hover .card-overlay {
+    opacity: 1;
+  }
+}
+
+/* MOBILE/TABLET TAP */
+.card input:checked + .card-front + .card-overlay {
+  opacity: 1;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 991px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    height: auto;
+  }
+}
+</style>
+
+<div class="cards-container">
+
+  <!-- Card 1 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-briefcase"></i></div>
+      <h3>Business Strategy</h3>
+    </div>
+    <div class="card-overlay">
+      Long-term planning for business growth and success.
+    </div>
+  </label>
+
+  <!-- Card 2 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-cogs"></i></div>
+      <h3>Technical Support</h3>
+    </div>
+    <div class="card-overlay">
+      Fast and reliable technical assistance.
+    </div>
+  </label>
+
+  <!-- Card 3 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-globe"></i></div>
+      <h3>Web Development</h3>
+    </div>
+    <div class="card-overlay">
+      High-performance, responsive modern websites.
+    </div>
+  </label>
+
+  <!-- Card 4 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-bullhorn"></i></div>
+      <h3>Marketing Solutions</h3>
+    </div>
+    <div class="card-overlay">
+      Increase brand visibility with smart strategies.
+    </div>
+  </label>
+
+  <!-- Card 5 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-chart-line"></i></div>
+      <h3>Data Analytics</h3>
+    </div>
+    <div class="card-overlay">
+      Turn data into insights that power decisions.
+    </div>
+  </label>
+
+  <!-- Card 6 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Cyber Security</h3>
+    </div>
+    <div class="card-overlay">
+      Advanced protection for your digital assets.
+    </div>
+  </label>
+
+  <!-- Card 7 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-paint-brush"></i></div>
+      <h3>Graphic Design</h3>
+    </div>
+    <div class="card-overlay">
+      Creative, professional visuals for your brand.
+    </div>
+  </label>
+
+  <!-- Card 8 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-handshake"></i></div>
+      <h3>Consulting</h3>
+    </div>
+    <div class="card-overlay">
+      Expert business and strategy advisory services.
+    </div>
+  </label>
+
+  <!-- Card 9 -->
+  <label class="card">
+    <input type="radio" name="cards">
+    <div class="card-front">
+      <div class="icon"><i class="fas fa-rocket"></i></div>
+      <h3>Startup Support</h3>
+    </div>
+    <div class="card-overlay">
+      Complete startup solutions for fast growth.
+    </div>
+  </label>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-----------------------------------End ------------------------------------------->
+
+<!------------------------------------------------------------------------------>
+
+
+
+
+<!-----------------------LIST TYPE Services Section----------------------------->
+
+
+<div class="main-wrapper">
+
+    <!-- Reusable Section -->
+    <div class="container">
+        <div class="left-panel">Business Strategy</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>A business strategy is a plan that outlines how a company will achieve its long-term goals, compete effectively in the market, and 
+                    create value for its stakeholders. It involves analyzing the internal strengths and weaknesses of the organization, understanding external opportunities and 
+                    threats, and making strategic choices regarding products, markets, pricing, and operations. A well-defined business strategy helps guide decision-making, allocate resources efficiently, and 
+                    build a sustainable competitive advantage. Companies that continuously adapt their strategy to market changes are more likely to thrive and maintain growth in the long run. Defines long-term vision and competitive direction.</p>
+                <ul>
+                    <li>Market analysis</li>
+                    <li>Growth planning</li>
+                    <li>Strategic alignment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Technical Support</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The service provided to help users solve problems related to technology, 
+                    such as computers, mobile phones, software, hardware, or internet connections. 
+                    It involves identifying issues, giving instructions, and fixing errors so that devices and systems work properly.
+                Technical support can be offered in many ways, including phone calls, online chat, email, or in person. 
+                The main goal of technical support is to help users use technology effectively, reduce technical difficulties, and 
+                ensure smooth and reliable operation of technical systems.Ensures smooth operation of technical systems.</p>
+                <ul>
+                    <li>Troubleshooting</li>
+                    <li>Remote assistance</li>
+                    <li>System maintenance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Web Development</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The process of creating and maintaining websites and web applications for the internet. 
+                    It involves writing code, designing layouts, and building features that allow users to interact with a website easily and efficiently.
+            Web development also includes updating websites, fixing errors, improving performance, and ensuring security. It helps businesses, organizations, 
+            and individuals share information online and provide services through well-structured and user-friendly websites.Creates responsive and scalable websites.</p>
+                <ul>
+                    <li>Frontend & Backend</li>
+                    <li>Responsive design</li>
+                    <li>Performance optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Marketing Solutions</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The strategies, tools, and services used to promote products or services and reach the right audience. 
+                    They include activities such as advertising, branding, market research, and digital marketing to increase awareness and attract customers.
+                     Marketing solutions also focus on analyzing customer needs and measuring results to improve performance. 
+                     By using effective marketing solutions, businesses can grow their customer base, build strong relationships, and achieve their sales and 
+                     business goals. Boosts brand visibility and engagement.</p>
+                <ul>
+                    <li>Digital marketing</li>
+                    <li>SEO & SEM</li>
+                    <li>Campaign management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Data Analytics</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The process of collecting, organizing, and examining data to discover useful information and patterns.
+                     It helps in understanding trends, solving problems, and making better decisions based on facts rather than guesses.
+                 Data analytics also involves using tools and techniques such as charts, statistics, and software to interpret data clearly.
+                  Businesses and organizations use data analytics to improve performance, predict future outcomes,and plan effective strategies.
+                  Turns data into meaningful insights.</p>
+                <ul>
+                    <li>Business intelligence</li>
+                    <li>Data visualization</li>
+                    <li>Predictive analytics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Cyber Security</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The practice of protecting computers, networks, and digital information from unauthorized access, attacks, or damage. 
+                    It involves using security measures such as passwords, encryption, and firewalls to keep data safe from hackers and cyber threats.
+                    Cyber security also focuses on preventing data theft, maintaining privacy, and ensuring systems work safely and reliably. 
+                    It is important for individuals, businesses, and governments to protect sensitive information and maintain trust in digital systems.
+                    Protects digital assets from cyber threats.</p>
+                <ul>
+                    <li>Network security</li>
+                    <li>Threat monitoring</li>
+                    <li>Data protection</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Graphic Design</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The art and practice of creating visual content to communicate messages clearly and attractively. 
+                    It uses elements such as images, colors, typography, and layout to design materials like logos, posters, brochures, and social media graphics.
+                Graphic design also helps businesses and organizations build their identity and connect with their audience visually. 
+                Good graphic design makes information easy to understand, visually appealing, and effective for communication and branding purposes.
+                Delivers creative and visual communication.</p>
+                <ul>
+                    <li>Brand identity</li>
+                    <li>UI/UX design</li>
+                    <li>Marketing creatives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Consulting</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The professional service of providing expert advice and guidance to individuals or organizations to help them solve problems or improve performance. 
+                    Consultants analyze situations, identify challenges, and suggest effective solutions based on their knowledge and experience.
+                   Consulting also involves helping clients make better decisions, plan strategies, and implement improvements in areas such as business, technology, management, or finance.
+                   The goal of consulting is to support growth, efficiency, and success. Provides expert business guidance.</p>
+                <ul>
+                    <li>Process improvement</li>
+                    <li>Strategic planning</li>
+                    <li>Risk management</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">Startup Support</div>
+        <div class="right-panel">
+            <div class="content-box">
+                <p>The assistance and guidance provided to new businesses during their early stages of development. 
+                    It includes help with planning, funding, product development, legal setup, and understanding the market to build a strong foundation.
+                   Startup support also involves mentoring, networking opportunities, and access to resources that help startups grow and overcome challenges. 
+                   With proper startup support, entrepreneurs can make better decisions, reduce risks, and increase their chances of long-term success.
+                   Helps startups grow and scale.</p>
+                <ul>
+                    <li>Business mentoring</li>
+                    <li>Funding guidance</li>
+                    <li>Go-to-market strategy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+
+            
+
+
+
+
+
+<!-----------------------End Services Section----------------------------->
+
+
+
+
+
+
+
+
+
+
+<!---------------------------Footer Section-------------------------------->
+
+
+<!---------------------------Footer Section-------------------------------->
+
+<style>
+
+/*-----*/
+    html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+    /*-----*/
+
+
+
+
+footer {
+    width: 100%;
+    background: #0d2346;
+    color: #ffffff;
+     margin-top: 50px;   
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+      margin-bottom: 0;
+  padding-bottom: 0;
+  display: block;  
+}
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(320px, 2fr)
+        minmax(160px, 1fr)
+        minmax(220px, 1.2fr)
+        minmax(250px, 1.2fr);
+
+    gap: 45px;
+
+    padding: 55px 35px 45px;
+}
+
+
+/* =========================================================
+   INFORMATION TECHNOLOGY
+========================================================= */
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.footer-logo h1 span {
+    color: #4fc3ff;
+}
+
+.footer-logo p {
+    color: #d9e1ec;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 560px;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+}
+
+
+/* Small line under heading */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: #4fc3ff;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES
+========================================================= */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #d9e1ec;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4fc3ff;
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+========================================================= */
+
+.contact p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #d9e1ec;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+.contact p i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #ffd54f;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.social {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #223b63;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #4fc3ff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(79, 195, 255, 0.35);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    background: #08162f;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #cbd3df;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: #4fc3ff;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 45px 30px;
+    }
+
+    .footer-logo {
+        grid-column: span 3;
+    }
+
+    .footer-logo p {
+        max-width: 900px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding: 40px 25px;
+    }
+
+    .footer-logo {
+        grid-column: span 2;
+
+        text-align: center;
+    }
+
+    .footer-logo p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-column h3::after {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 20px;
+    }
+
+    .footer-logo {
+        grid-column: span 1;
+
+        text-align: center;
+    }
+
+    .footer-logo h1 {
+        font-size: 26px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .contact p {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: 16px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-container {
+        padding: 30px 15px;
+    }
+
+    .footer-logo h1 {
+        font-size: 23px;
+    }
+
+    .footer-column h3 {
+        font-size: 19px;
+    }
+
+    .social a {
+        width: 38px;
+        height: 38px;
+    }
+}
+</style>
+<!-------------------Footer------------------------->
+
+<!---------------------------Footer Section-------------------------------->
+<footer> <div class="footer-container"> 
+  <div class="footer-logo"> <h1>Information <span>Technology</span></h1> 
+    <p>
+       Empowering innovation through modern technology, software development, web applications, networking, database management, cybersecurity, cloud computing, and digital transformation.
+
+We focus on creating reliable, efficient, and user-friendly technology solutions that help individuals and businesses achieve their goals.
+
+Our approach combines creativity, technical knowledge, and modern tools to develop smart digital solutions for today's fast-changing world. 
+    
+    </p> 
+      <div class="social"> 
+        <a><i class="fab fa-linkedin-in"></i></a> 
+        <a><i class="fab fa-facebook-f"></i></a> 
+        <a><i class="fab fa-x-twitter"></i></a> 
+        <a><i class="fab fa-whatsapp"></i></a> 
+      </div> </div> 
+      
+      <div class="footer-column"> 
+        <h3>Quick Links</h3> 
+        <ul> 
+        <li><a href="#">Home</a></li> 
+        <li><a href="#">About </a></li> 
+        <li><a href="#">Services</a></li> 
+        <li><a href="#">contact</a></li> 
+        <li><a href="#">course</a></li> 
+        
+      </ul> 
+    </div> 
+    <div class="footer-column"> 
+      <h3>Our Services</h3> 
+      <ul> 
+        <li><a>Web Development</a></li> 
+        <li><a>Software Development</a></li> 
+        <li><a>Mobile App Development</a></li> 
+        <li><a>UI / UX Design</a></li> 
+        <li><a>Cloud Solutions</a></li> 
+      </ul> 
+    </div> 
+    <div class="footer-column contact"> 
+      <h3>Get In Touch</h3> 
+      <p><i class="fas fa-location-dot"></i> Dubai, United Arab Emirates </p> 
+      <p><i class="fas fa-phone"></i> +971 0527442274 </p> 
+      <p><i class="fas fa-envelope"></i> zeerintaj1712@gmail.com </p> 
+    </div> 
+  </div> 
+  <div class="footer-bottom"> © 2026 Information Technology. All Rights Reserved. </div> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1625 @@
+
+
+<!-----------------------------Information Technology----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Information.com</title>
+
+  <link rel="stylesheet" href="Home.css">
+  <script src="script.js"></script>
+<link rel="stylesheet" herf="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+
+
+<!----  <meta http-equiv="content-type" content="text/html; charset=utf-8" />   ------>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link herf=" https//www.Information.com">
+<link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<a href="https://wa.me/971527442274?text=Hello%20I%20would%20like%20more%20information" class="whatsapp-icon" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://github.com/PHPMailer/PHPMailer/archive/refs/heads/master.zip"></a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+
+
+  <style>
+    /* RESET 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }*/
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+      padding-top: 130px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      
+      background: linear-gradient(270deg, #000, #1270e3, #000, #1270e3);
+      background-size: 400% 400%;
+      animation: blueGlow 6s ease infinite;
+      
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #fff;
+      font-size: 25px;
+  font-weight: 600;
+      cursor: pointer;
+      left:0;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+
+      /* ANIMATION */
+      animation: floatLogo 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(18, 112, 227, 0.9));
+      transition: transform 0.6s ease;
+    }
+   
+
+    /* Floating animation */
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Rotate on hover */
+    .logo:hover img {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    /* MENU */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      padding: 5px 0;
+      nav-right: 30%;
+    }
+  .nav-menu a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: 0.3s;
+      
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width:50%;
+        
+        background: linear-gradient(270deg, #043df7, #1270e3, #0764ce, #1270e3);
+        flex-direction: column;
+        align-items:center;
+        display: none;
+        padding: 20px 0;
+        border-radius: 50px;
+
+        animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+    
+  </style>
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+      <span>Information<br>Technology</span>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="Home.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="About.html"><i class="fa fa-graduation-cap"></i> About</a></li>
+      <li><a href="Services.html"><i class="fa-brands fa-servicestack"></i> Services</a></li>
+      <li><a href="Contact.html"><i class="fa fa-id-card"></i> Contact</a></li>
+      <li><a href="Course.html"><i class="fas fa-laptop-code"></i> Course</a></li>
+     
+    </ul>
+
+  </nav>
+
+  <!-- JS -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("nav-menu");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+<!--------------------------------------- End Fixed Navbar------------------------------------------------->
+
+
+
+
+<!--------------Home page--------------------->
+<section id="Home">
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- Left Content -->
+    <div class="hero-text">
+      <h4>Hello, I'm</h4>
+      <h1>Thanga Nachiyar</h1>
+      <h1><span>W</span>EB  <span>D</span>ESIGNER</h1>
+      <p><b>
+        Web designer and developer from Dubai.<br>
+        I specialize in creating modern, <span>fully responsive websites.</span></b>
+      </p>
+      
+    </div>
+
+   
+
+    <div class="hero-image">
+        <img src="image/taj.jpeg" alt="Profile">
+    </div>
+
+    <style>
+        .hero-text span{
+             color:rgb(41, 179, 248)
+        }
+        .hero-text p {
+             font-size: 20px;
+        }
+ 
+
+      .hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+
+.hero-image img{
+    max-width:330px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+
+.hero-image img{
+    width:280px;
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+
+.hero-image img{
+    width:220px;
+}
+
+
+
+}
+    </style>
+
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+</section>
+<!-------------------------------------Button----------------------------------------------->
+
+<!------------------------------------End Button---------------------------------------------------->
+
+
+
+
+<!---------------------------------Core Competencies-------------------------------------------->
+
+<!-- Include Font Awesome CDN in the head of your HTML -->
+
+
+<section class="competencies">
+  <h2>Core Competencies</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon"><i class="fas fa-code"></i></div>
+      <div class="content">
+        <h3>Software Design & Development</h3>
+        <p>Designing scalable, maintainable software using clean architecture principles.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-project-diagram"></i></div>
+      <div class="content">
+        <h3>Data Structures & Algorithms</h3>
+        <p>Applying efficient data structures and algorithms for optimal performance.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fab fa-html5"></i></div>
+      <div class="content">
+        <h3>Web & Application Development</h3>
+        <p>Developing responsive web and app interfaces using modern tools.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-bug"></i></div>
+      <div class="content">
+        <h3>Testing & Optimization</h3>
+        <p>Testing and optimizing code for performance, reliability, and maintainability.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fab fa-git-alt"></i></div>
+      <div class="content">
+        <h3>Version Control & Collaboration</h3>
+        <p>Using version control systems to manage codebases and collaborate efficiently.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-database"></i></div>
+      <div class="content">
+        <h3>Database Management</h3>
+        <p>Designing and managing relational and non-relational databases efficiently.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-network-wired"></i></div>
+      <div class="content">
+        <h3>Networking & Security</h3>
+        <p>Implementing secure network protocols and maintaining cybersecurity standards.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-cloud"></i></div>
+      <div class="content">
+        <h3>Cloud Computing</h3>
+        <p>Leveraging cloud services for scalable and reliable applications.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-robot"></i></div>
+      <div class="content">
+        <h3>AI & Machine Learning</h3>
+        <p>Building intelligent systems using machine learning algorithms and AI techniques.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+      <div class="content">
+        <h3>Mobile Development</h3>
+        <p>Creating user-friendly mobile applications for Android and iOS platforms.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-chart-line"></i></div>
+      <div class="content">
+        <h3>Data Analytics</h3>
+        <p>Analyzing data to generate actionable insights and drive decision-making.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fas fa-lightbulb"></i></div>
+      <div class="content">
+        <h3>Innovation & Problem Solving</h3>
+        <p>Applying creative solutions to complex technical and business challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--------------------------END--------Core Competencies------------------------------------------->
+<!----------------------------------Team member------------------------------------------->
+<!---------------------------------- Team Members ---------------------------------->
+
+<style>
+
+/* ==============================
+   TEAM SECTION
+============================== */
+
+.team-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.team-section h1 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 12px;
+    color: #222;
+}
+
+.team-section > p {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    max-width: 720px;
+    line-height: 1.7;
+    margin: 0 auto 55px;
+}
+
+
+/* ==============================
+   TEAM GRID
+============================== */
+
+.team-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* ==============================
+   TEAM CARD
+============================== */
+
+.team-card {
+    width: 100%;
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.14);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ==============================
+   IMAGE
+============================== */
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f1f1f1;
+    flex-shrink: 0;
+}
+
+.team-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+
+/* ==============================
+   CONTENT
+============================== */
+
+.team-content {
+    padding: 28px 24px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.team-content h3 {
+    margin: 0 0 7px;
+    color: #222;
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    line-height: 1.3;
+}
+
+.team-content span {
+    display: block;
+    color: #6a11cb;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.team-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.team-content button {
+    margin: auto auto 0;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #1e3c72, #6a11cb);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-content button:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
+}
+
+
+/* ==============================
+   MODAL BACKGROUND
+============================== */
+
+.profile-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.82);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+
+/* ==============================
+   MODAL BOX
+============================== */
+
+.profile-box {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+
+    background: #ffffff;
+    border-radius: 22px;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+
+    animation: modalOpen 0.3s ease;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ==============================
+   MODAL CONTENT
+============================== */
+
+.profile-box h2 {
+    margin: 0 0 8px;
+    color: #222;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.profile-box h4 {
+    margin: 0 0 22px;
+    color: #6a11cb;
+    font-size: 1rem;
+}
+
+.profile-box p {
+    margin: 0 0 16px;
+    color: #444;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   CLOSE BUTTON
+============================== */
+
+.close-btn {
+    position: fixed;
+    top: 18px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+
+    font-size: 34px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10000;
+
+    transition: 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #ffffff;
+    color: #6a11cb;
+    transform: rotate(90deg);
+}
+
+
+/* ==============================
+   LARGE DESKTOP
+============================== */
+
+@media (min-width: 1200px) {
+
+    .team-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .team-image {
+        height: 320px;
+    }
+
+    .team-grid {
+        gap: 35px;
+    }
+}
+
+
+/* ==============================
+   LAPTOP
+============================== */
+
+@media (min-width: 901px) and (max-width: 1199px) {
+
+    .team-section {
+        padding: 70px 25px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .team-image {
+        height: 270px;
+    }
+
+    .team-content {
+        padding: 24px 18px 28px;
+    }
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .team-section {
+        padding: 60px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .team-image {
+        height: 260px;
+    }
+
+    .team-content {
+        padding: 24px 18px 28px;
+    }
+
+    .team-content p {
+        font-size: 0.92rem;
+    }
+
+    .profile-box {
+        max-width: 600px;
+        padding: 32px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    .team-section {
+        padding: 50px 15px;
+    }
+
+    .team-section h1 {
+        font-size: 2rem;
+    }
+
+    .team-section > p {
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .team-image {
+        height: 280px;
+    }
+
+    .team-content {
+        padding: 24px 20px 28px;
+    }
+
+    .team-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .team-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .team-content button {
+        width: 100%;
+        max-width: 230px;
+        padding: 12px 20px;
+    }
+
+    .profile-modal {
+        padding: 15px;
+        align-items: center;
+    }
+
+    .profile-box {
+        width: 100%;
+        max-height: 85vh;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .profile-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-box p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+}
+
+
+/* ==============================
+   VERY SMALL MOBILE
+============================== */
+
+@media (max-width: 380px) {
+
+    .team-section {
+        padding: 40px 12px;
+    }
+
+    .team-image {
+        height: 240px;
+    }
+
+    .team-content {
+        padding: 22px 16px 25px;
+    }
+
+    .team-content button {
+        max-width: 100%;
+    }
+
+    .profile-box {
+        padding: 25px 17px;
+    }
+}
+
+
+/* ==============================
+   PREVENT HORIZONTAL SCROLL
+============================== */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+</style>
+
+
+<section class="team-section">
+
+    <h1>Meet Our Team</h1>
+
+    <p>
+        Meet the talented people behind our technology, design,
+        development, and innovation. Tap or click on
+        "View Profile" to learn more.
+    </p>
+
+
+    <div class="team-grid">
+
+
+        <!-- ================= CARD 1 ================= -->
+
+        <div class="team-card">
+
+            <div class="team-image">
+                <img
+                    src="image/bro.jpeg"
+                    alt="Sheik Abdulla - CEO"
+                >
+            </div>
+
+            <div class="team-content">
+
+                <h3>Sheik Abdulla</h3>
+
+                <span>CEO</span>
+
+                <p>
+                    Visionary leader driving innovation,
+                    strategy, and long-term growth.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="openProfile(
+                        'Sheik Abdulla',
+                        'CEO',
+                        'Sheik Abdulla is a visionary CEO with a strong focus on innovation and long-term growth. He leads the organization with strategic planning and a passion for technology.',
+                        'With years of leadership experience, he believes in building strong teams, encouraging creativity, and delivering impactful digital solutions.'
+                    )"
+                >
+                    View Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CARD 2 ================= -->
+
+        <div class="team-card">
+
+            <div class="team-image">
+                <img
+                    src="image/vahi.jpeg"
+                    alt="Vahitha Rahuman - Designer"
+                >
+            </div>
+
+            <div class="team-content">
+
+                <h3>Vahitha Rahuman</h3>
+
+                <span>Designer</span>
+
+                <p>
+                    Creative designer building beautiful
+                    and user-friendly digital experiences.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="openProfile(
+                        'Vahitha Rahuman',
+                        'Designer',
+                        'Vahitha is a creative designer who specializes in UI/UX and visual storytelling. She focuses on creating clean, user-friendly interfaces.',
+                        'Her design philosophy is centered around simplicity, accessibility, and delivering delightful user experiences across all platforms.'
+                    )"
+                >
+                    View Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CARD 3 ================= -->
+
+        <div class="team-card">
+
+            <div class="team-image">
+
+                
+                <img
+                    src="image/taj.jpeg"
+                    alt="Thanga Nachiyar - Developer"
+                >
+            </div>
+
+            <div class="team-content">
+
+                <h3>Thanga Nachiyar</h3>
+
+                <span>Developer</span>
+
+                <p>
+                    Developer building scalable, secure,
+                    and modern web applications.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="openProfile(
+                        'Thanga Nachiyar',
+                        'Developer',
+                        'Thanga is a skilled developer with expertise in building scalable and secure web applications using modern technologies.',
+                        'She enjoys solving complex problems, writing clean code, and continuously learning new tools to improve performance and reliability.'
+                    )"
+                >
+                    View Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     PROFILE MODAL
+============================== -->
+
+<div
+    class="profile-modal"
+    id="profileModal"
+    onclick="closeProfileOutside(event)"
+>
+
+    <span
+        class="close-btn"
+        onclick="closeProfile()"
+        aria-label="Close"
+    >
+        ×
+    </span>
+
+
+    <div
+        class="profile-box"
+        onclick="event.stopPropagation()"
+    >
+
+        <h2 id="profileName"></h2>
+
+        <h4 id="profileRole"></h4>
+
+        <p id="profilePara1"></p>
+
+        <p id="profilePara2"></p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* ==============================
+   OPEN PROFILE
+============================== */
+
+function openProfile(name, role, para1, para2) {
+
+    document.getElementById("profileName").textContent = name;
+
+    document.getElementById("profileRole").textContent = role;
+
+    document.getElementById("profilePara1").textContent = para1;
+
+    document.getElementById("profilePara2").textContent = para2;
+
+    document.getElementById("profileModal").style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* ==============================
+   CLOSE PROFILE
+============================== */
+
+function closeProfile() {
+
+    document.getElementById("profileModal").style.display = "none";
+
+    document.body.style.overflow = "";
+}
+
+
+/* ==============================
+   CLOSE WHEN CLICKING OUTSIDE
+============================== */
+
+function closeProfileOutside(event) {
+
+    if (event.target === document.getElementById("profileModal")) {
+
+        closeProfile();
+
+    }
+
+}
+
+
+/* ==============================
+   ESC KEY TO CLOSE
+============================== */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeProfile();
+
+    }
+
+});
+
+</script>
+
+<!---------------------------------- End Team Members ---------------------------------->
+
+
+
+
+<!--------------------------Team Member------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------Footer Section-------------------------------->
+
+<style>
+
+footer {
+    width: 100%;
+    background: #0d2346;
+    color: #ffffff;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(320px, 2fr)
+        minmax(160px, 1fr)
+        minmax(220px, 1.2fr)
+        minmax(250px, 1.2fr);
+
+    gap: 45px;
+
+    padding: 55px 35px 45px;
+}
+
+
+/* =========================================================
+   INFORMATION TECHNOLOGY
+========================================================= */
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.footer-logo h1 span {
+    color: #4fc3ff;
+}
+
+.footer-logo p {
+    color: #d9e1ec;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 560px;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+}
+
+
+/* Small line under heading */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: #4fc3ff;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES
+========================================================= */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #d9e1ec;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4fc3ff;
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+========================================================= */
+
+.contact p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #d9e1ec;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+.contact p i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #ffd54f;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.social {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #223b63;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #4fc3ff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(79, 195, 255, 0.35);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    background: #08162f;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #cbd3df;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: #4fc3ff;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 45px 30px;
+    }
+
+    .footer-logo {
+        grid-column: span 3;
+    }
+
+    .footer-logo p {
+        max-width: 900px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding: 40px 25px;
+    }
+
+    .footer-logo {
+        grid-column: span 2;
+
+        text-align: center;
+    }
+
+    .footer-logo p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-column h3::after {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 20px;
+    }
+
+    .footer-logo {
+        grid-column: span 1;
+
+        text-align: center;
+    }
+
+    .footer-logo h1 {
+        font-size: 26px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .contact p {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: 16px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-container {
+        padding: 30px 15px;
+    }
+
+    .footer-logo h1 {
+        font-size: 23px;
+    }
+
+    .footer-column h3 {
+        font-size: 19px;
+    }
+
+    .social a {
+        width: 38px;
+        height: 38px;
+    }
+}
+</style>
+<!-------------------Footer------------------------->
+
+<!---------------------------Footer Section-------------------------------->
+<footer> <div class="footer-container"> 
+  <div class="footer-logo"> <h1>Information <span>Technology</span></h1> 
+    <p>
+       Empowering innovation through modern technology, software development, web applications, networking, database management, cybersecurity, cloud computing, and digital transformation.
+
+We focus on creating reliable, efficient, and user-friendly technology solutions that help individuals and businesses achieve their goals.
+
+Our approach combines creativity, technical knowledge, and modern tools to develop smart digital solutions for today's fast-changing world. 
+    
+    </p> 
+      <div class="social"> 
+        <a><i class="fab fa-linkedin-in"></i></a> 
+        <a><i class="fab fa-facebook-f"></i></a> 
+        <a><i class="fab fa-x-twitter"></i></a> 
+        <a><i class="fab fa-whatsapp"></i></a> 
+      </div> </div> 
+      
+      <div class="footer-column"> 
+        <h3>Quick Links</h3> 
+        <ul> 
+        <li><a href="Home.html">Home</a></li> 
+        <li><a href="About.html">About </a></li> 
+        <li><a href="Services.html">Services</a></li> 
+        <li><a href="Contact.html">contact</a></li> 
+        <li><a href="Course.html">course</a></li> 
+        
+      </ul> 
+    </div> 
+    <div class="footer-column"> 
+      <h3>Our Services</h3> 
+      <ul> 
+        <li><a>Web Development</a></li> 
+        <li><a>Software Development</a></li> 
+        <li><a>Mobile App Development</a></li> 
+        <li><a>UI / UX Design</a></li> 
+        <li><a>Cloud Solutions</a></li> 
+      </ul> 
+    </div> 
+    <div class="footer-column contact"> 
+      <h3>Get In Touch</h3> 
+      <p><i class="fas fa-location-dot"></i> Dubai, United Arab Emirates </p> 
+      <p><i class="fas fa-phone"></i> +971-0527442274 </p> 
+      <p><i class="fas fa-envelope"></i> zeerintaj1712@gmail.com </p> 
+    </div> 
+  </div> 
+  <div class="footer-bottom"> © 2026 Information Technology. All Rights Reserved. </div> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

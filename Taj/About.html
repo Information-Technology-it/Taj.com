@@ -1,0 +1,1280 @@
+
+
+<!-----------------------------Information Technology----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Information.com</title>
+
+  <link rel="stylesheet" href="About.css">
+  <script src="script.js"></script>
+
+    
+
+
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+
+
+<!----  <meta http-equiv="content-type" content="text/html; charset=utf-8" />   ------>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link herf=" https//www.Information.com">
+<link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<a href="https://wa.me/971527442274?text=Hello%20I%20would%20like%20more%20information" class="whatsapp-icon" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://github.com/PHPMailer/PHPMailer/archive/refs/heads/master.zip"></a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+      padding-top: 130px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      
+      background: linear-gradient(270deg, #000, #1270e3, #000, #1270e3);
+      background-size: 400% 400%;
+      animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #fff;
+      font-size: 25px;
+  font-weight: 600;
+      cursor: pointer;
+      left:0;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+
+      /* ANIMATION */
+      animation: floatLogo 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(18, 112, 227, 0.9));
+      transition: transform 0.6s ease;
+    }
+    
+
+
+    /* Floating animation */
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Rotate on hover */
+    .logo:hover img {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    /* MENU */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      padding: 5px 0;
+      nav-right: 30%;
+    }
+  .nav-menu a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width:50%;
+        
+        background: linear-gradient(270deg, #043df7, #1270e3, #0764ce, #1270e3);
+        flex-direction: column;
+        align-items:center;
+        display: none;
+        padding: 20px 0;
+        border-radius: 50px;
+
+        animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+    
+  </style>
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+      <span>Information<br>Technology</span>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="Home.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="About.html"><i class="fa fa-graduation-cap"></i> About</a></li>
+      <li><a href="Services.html"><i class="fa-brands fa-servicestack"></i> Services</a></li>
+      <li><a href="Contact.html"><i class="fa fa-id-card"></i> Contact</a></li>
+      <li><a href="Course.html"><i class="fas fa-laptop-code"></i> Course</a></li>
+      
+    </ul>
+
+  </nav>
+
+  <!-- JS -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("nav-menu");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+<!--------------------------------------- End Fixed Navbar------------------------------------------------->
+
+
+ 
+
+
+
+
+<!--------------------About Section----------------------->
+<section class="hero">
+
+  <!-- LEFT CONTENT CARD -->
+  <div class="hero-left">
+    <div class="content-card">
+      <h1>Thanga Nachiyar <br> Web Developer</h1>
+      <p>
+        I am a full-stack web developer specializing in creating modern, responsive, 
+        and user-friendly websites. I build fast, accessible, and visually appealing 
+        digital experiences using HTML, CSS, JavaScript, Node.js, databases, and APIs.
+      </p>
+      <p>
+        I am a quick learner and a good team player, and I’m looking forward to contributing 
+        to our company with my skills and dedication. My goals are to grow my knowledge, 
+        build useful skills, and work on exciting projects.
+      </p>
+      <div class="details">
+        <p><strong>Name:</strong> Thanga Nachiyar</p>
+        <p><strong>Profession:</strong> Web Developer</p>
+        <p><strong>Email:</strong> zeerintaj1712@gmail.com</p>
+        <p><strong>Location:</strong> Dubai</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT FLOATING BALLS -->
+  <div class="hero-right">
+    <div class="ball-scene">
+      <div class="ball b1">Develop</div>
+      <div class="ball b2">Project</div>
+      <div class="ball b3">Design</div>
+      <div class="ball b4">Code</div>
+      <div class="ball b5">Create</div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* HERO SECTION */
+.hero {
+  width: 95%;
+  max-width: 1400px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* HERO LEFT */
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* CONTENT CARD */
+.content-card {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  max-width: 650px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.content-card h1 {
+  font-size: clamp(26px, 3vw, 36px);
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.content-card p {
+  font-size:20px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.details p {
+  font-size: 18px;
+  color: #333;
+  margin: 6px 0;
+}
+
+.details p strong {
+  color: #000;
+}
+
+/* HERO RIGHT */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1400px;
+  padding-bottom: 20px;
+}
+
+.ball-scene {
+  position: relative;
+  width: min(480px, 90vw);
+  height: min(480px, 90vw);
+}
+
+.ball {
+  position: absolute;
+  width: clamp(120px, 18vw, 180px);
+  height: clamp(120px, 18vw, 180px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgb(6, 172, 238), #333);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.25), inset -15px -15px 30px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: clamp(14px, 1.8vw, 20px);
+  font-weight: 600;
+  text-align: center;
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* BALL POSITIONS */
+.b1 { top: 0; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.b2 { top: 160px; left: 0; animation-delay: 1s; }
+.b3 { top: 160px; right: 0; animation-delay: 2s; }
+.b4 { bottom: 0; left: 80px; animation-delay: 3s; }
+.b5 { bottom: 0; right: 80px; animation-delay: 4s; }
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0) translateZ(0); }
+  50% { transform: translateY(-45px) translateZ(80px); }
+  100% { transform: translateY(0) translateZ(0); }
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-left, .hero-right {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-card {
+    padding: 20px 20px;
+  }
+  .content-card h1 {
+    font-size: 22px;
+  }
+  .content-card p {
+    font-size: 14px;
+  }
+  .ball-scene {
+    width: min(350px, 90vw);
+    height: min(350px, 90vw);
+  }
+}
+</style>
+
+   
+
+
+<!------------------End About Section---------------------->
+<!-----------------------Additional Section-------------------------------------->
+<!------------------------------Develop-------------------------------------------------->
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+    }
+    .container{
+      display:flex;
+      flex-wrap:wrap;
+      min-height:100vh;
+    }
+    .left{
+      flex:1 1 300px;
+      background:#222;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+    .left img{
+      width:200px;
+      border-radius:50%;
+      border:4px solid #fff;
+      max-width:100%;
+      height:auto;
+    }
+    .right{
+      flex:2 1 400px;
+      padding:40px;
+      background:#fff;
+    }
+    h1{
+      margin-top:0;
+      color:#333;
+    }
+    h3{
+      color:#555;
+    }
+    ul{
+      line-height:1.8;
+    }
+
+    /* Services Section */
+    .services{
+      padding:60px 20px;
+      background:#f9f9f9;
+      text-align:center;
+    }
+    .services h2{
+      font-size:32px;
+      margin-bottom:40px;
+    }
+    .service-box{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+    }
+    .card{
+      background:#fff;
+      padding:30px;
+      width:300px;
+      box-shadow:0 0 15px rgba(0,0,0,.1);
+      border-radius:10px;
+      transition:transform .3s;
+    }
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    /* Timeline Section */
+    .timeline{
+      padding:60px 20px;
+      background:#111;
+      color:#fff;
+    }
+    .timeline h2{
+      text-align:center;
+      margin-bottom:50px;
+    }
+    .line{
+      max-width:800px;
+      margin:auto;
+      border-left:4px solid #00bcd4;
+      padding-left:40px;
+    }
+    .item{
+      margin-bottom:40px;
+      position:relative;
+    }
+    .item::before{
+      content:'';
+      width:16px;
+      height:16px;
+      background:#00bcd4;
+      border-radius:50%;
+      position:absolute;
+      left:-50px;
+      top:5px;
+    }
+    .item span{
+      color:#00bcd4;
+      font-weight:bold;
+    }
+
+    /* Skills Section */
+    .skills{
+      padding:60px 20px;
+      background:#f4f4f4;
+      max-width:800px;
+      margin:auto;
+    }
+    .skills h2{
+      text-align:center;
+      margin-bottom:40px;
+    }
+    .skill{
+      margin-bottom:25px;
+    }
+    .skill h3{
+      margin-bottom:10px;
+      color:#333;
+    }
+    .bar{
+      background:#ddd;
+      border-radius:20px;
+      overflow:hidden;
+      height:20px;
+    }
+    .progress{
+      height:100%;
+      background:#00bcd4;
+      width:0;
+      border-radius:20px;
+      transition: width 1s ease-in-out;
+    }
+    .skill:hover .progress{
+      width: inherit;
+    }
+
+    /* Projects Section */
+    .projects{
+      padding:60px 20px;
+      background:#f4f4f4;
+      max-width:1200px;
+      margin:auto;
+    }
+    .projects h2{
+      text-align:center;
+      margin-bottom:50px;
+      color:#333;
+    }
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:30px;
+    }
+    .project-card{
+      background:#fff;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.1);
+      text-align:center;
+      padding:15px;
+      
+      /* Animation */
+      opacity:0;
+      transform:translateY(30px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .project-card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:8px;
+      margin-bottom:10px;
+    }
+    .project-card h3{
+      margin:10px 0;
+      color:#00bcd4;
+      font-size:21px;
+    }
+    .project-card p{
+      color:#555;
+      font-size:18px;
+    }
+
+    /* Fade-up Animation */
+    @keyframes fadeUp{
+      0%{opacity:0; transform:translateY(30px);}
+      100%{opacity:1; transform:translateY(0);}
+    }
+
+    /* Stagger animation for 50 items */
+    .project-card:nth-child(1){ animation-delay:0.05s; }
+    .project-card:nth-child(2){ animation-delay:0.1s; }
+    .project-card:nth-child(3){ animation-delay:0.15s; }
+    .project-card:nth-child(4){ animation-delay:0.2s; }
+    .project-card:nth-child(5){ animation-delay:0.25s; }
+    .project-card:nth-child(6){ animation-delay:0.3s; }
+    .project-card:nth-child(7){ animation-delay:0.35s; }
+    .project-card:nth-child(8){ animation-delay:0.4s; }
+    .project-card:nth-child(9){ animation-delay:0.45s; }
+    .project-card:nth-child(10){ animation-delay:0.5s; }
+    /* Continue until 50 */
+
+    /* Responsive */
+    @media(max-width:1024px){
+      .project-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+    @media(max-width:768px){
+      .container{
+        flex-direction:column;
+      }
+      .project-grid{
+        grid-template-columns:1fr;
+      }
+      .line{
+        padding-left:20px;
+        border-left:3px solid #00bcd4;
+      }
+      .item::before{
+        left:-35px;
+      }
+    }
+    @media(max-width:480px){
+      .card{
+        width:100%;
+      }
+      .skill h3{
+        font-size:16px;
+      }
+      .projects{
+        padding:40px 10px;
+      }
+      .services h2, .timeline h2, .skills h2, .projects h2{
+        font-size:28px;
+      }
+    }
+  </style>
+
+
+  <!-- Left & Right -->
+ 
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>What I Do</h2>
+    <div class="service-box">
+      <div class="card"><h3>Web Design</h3><p>Modern, responsive, and user-friendly website designs.</p></div>
+      <div class="card"><h3>Frontend Development</h3><p>HTML, CSS, JavaScript based interactive web pages.</p></div>
+      <div class="card"><h3>UI Improvements</h3><p>Clean layouts, animations, and smooth user experience.</p></div>
+      <div class="card"><h3>Backend Development</h3><p>Server-side programming using Node.js, PHP, and databases.</p></div>
+    <div class="card"><h3>Responsive Design</h3><p>Websites that adapt perfectly to all screen sizes.</p></div>
+    <div class="card"><h3>API Integration</h3><p>Connect your apps to external services using APIs.</p></div>
+    <div class="card"><h3>E-commerce Solutions</h3><p>Build online stores with product catalog and payment systems.</p></div>
+    <div class="card"><h3>SEO Optimization</h3><p>Improve website visibility on search engines.</p></div>
+    <div class="card"><h3>Performance Tuning</h3><p>Optimize websites for speed and smooth user experience.</p></div>
+    <div class="card"><h3>Custom Web Apps</h3><p>Develop unique web applications tailored to client needs.</p></div>
+    <div class="card"><h3>Content Management</h3><p>CMS setup and management for blogs and websites.</p></div>
+    <div class="card"><h3>UI/UX Design</h3><p>User-friendly interface and seamless user experience design.</p></div>
+    <div class="card"><h3>Mobile App Design</h3><p>Design and prototype mobile applications with responsive layout.</p></div>
+    <div class="card"><h3>Security Optimization</h3><p>Implement security best practices to protect websites and apps.</p></div>
+    <div class="card"><h3>Analytics & Reporting</h3><p>Track website performance and user behavior with analytics tools.</p></div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+
+
+ 
+
+  <!-- Projects Section -->
+   <section class="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <div class="project-card"><h3>Portfolio Website</h3><p>Personal portfolio built with HTML, CSS, and JS to showcase skills.</p></div>
+    <div class="project-card"><h3>E-commerce Website</h3><p>Online store with product catalog and shopping cart functionality.</p></div>
+    <div class="project-card"><h3>Blog Platform</h3><p>Custom CMS for blogging with admin panel and dynamic content.</p></div>
+    <div class="project-card"><h3>Landing Page</h3><p>Marketing landing page with responsive design and animations.</p></div>
+    <div class="project-card"><h3>To-Do Application</h3><p>Task management app using JavaScript and local storage.</p></div>
+    <div class="project-card"><h3>Weather App</h3><p>Real-time weather info using public APIs and JS.</p></div>
+    <div class="project-card"><h3>Quiz Application</h3><p>Interactive quiz app with scoring and timer functionality.</p></div>
+    <div class="project-card"><h3>Chat Application</h3><p>Real-time chat app using WebSocket / Firebase for messaging.</p></div>
+    <div class="project-card"><h3>Recipe Finder</h3><p>Search recipes using API and display ingredients & instructions.</p></div>
+    <div class="project-card"><h3>Music Player</h3><p>Web-based audio player with playlist and controls.</p></div>
+    <div class="project-card"><h3>Portfolio Blog</h3><p>Combined portfolio and blog platform for developers.</p></div>
+    <div class="project-card"><h3>Photo Gallery</h3><p>Interactive image gallery with filtering and lightbox.</p></div>
+    <div class="project-card"><h3>Movie Finder App</h3><p>Search movies using API and view details and ratings.</p></div>
+    <div class="project-card"><h3>Calculator App</h3><p>Web-based calculator with advanced functions.</p></div>
+    <div class="project-card"><h3>News Aggregator</h3><p>Displays latest news articles from multiple sources via API.</p></div>
+    <div class="project-card"><h3>Dictionary App</h3><p>Search words and get definitions, synonyms, and examples.</p></div>
+    <div class="project-card"><h3>Calculator Pro</h3><p>Enhanced calculator with history and memory features.</p></div>
+  </div>
+</section>
+
+<style>
+/* MAIN SECTION */
+.projects {
+  width: 95%;
+  max-width: 1400px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 50px;
+  color: #222;
+  font-weight: 700;
+}
+
+/* GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD DESIGN */
+.project-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Light gradient hover + glow */
+.project-card:hover {
+  background: linear-gradient(135deg, #f0f9ff, #ffffff);
+  box-shadow: 0 15px 35px rgba(0,150,255,0.2);
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* HEADINGS */
+.project-card h3 {
+  font-size:20px;
+  margin-bottom: 12px;
+  color: #007acc;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: #005fa3;
+}
+
+/* PARAGRAPH */
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* SHOW ANIMATION */
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.6s ease-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 20px 15px;
+  }
+}
+</style>
+
+<script>
+// STAGGERED SCROLL ANIMATION
+const projectCards = document.querySelectorAll('.project-card');
+
+function revealProjects() {
+  const windowHeight = window.innerHeight;
+  projectCards.forEach((card, index) => {
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < windowHeight - 100){
+      setTimeout(() => {
+        card.classList.add('show');
+      }, index * 100); // staggered effect
+    }
+  });
+}
+
+window.addEventListener('scroll', revealProjects);
+window.addEventListener('load', revealProjects);
+</script>
+
+  
+
+<!--------------------------------End Evelop--------------------------------------------------->
+<!--------------------End Additional Section----------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------Footer Section-------------------------------->
+
+<!---------------------------Footer Section-------------------------------->
+
+<style>
+
+footer {
+    width: 100%;
+    background: #0d2346;
+    color: #ffffff;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+}
+h1{
+  color: white;
+}
+
+h3{
+  color:white;
+}
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(320px, 2fr)
+        minmax(160px, 1fr)
+        minmax(220px, 1.2fr)
+        minmax(250px, 1.2fr);
+
+    gap: 45px;
+
+    padding: 55px 35px 45px;
+}
+
+
+/* =========================================================
+   INFORMATION TECHNOLOGY
+========================================================= */
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.footer-logo h1 span {
+    color: #4fc3ff;
+}
+
+.footer-logo p {
+    color: #d9e1ec;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 560px;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+}
+
+
+/* Small line under heading */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: #4fc3ff;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES
+========================================================= */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #d9e1ec;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4fc3ff;
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+========================================================= */
+
+.contact p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #d9e1ec;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+.contact p i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #ffd54f;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.social {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #223b63;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #4fc3ff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(79, 195, 255, 0.35);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    background: #08162f;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #cbd3df;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: #4fc3ff;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 45px 30px;
+    }
+
+    .footer-logo {
+        grid-column: span 3;
+    }
+
+    .footer-logo p {
+        max-width: 900px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding: 40px 25px;
+    }
+
+    .footer-logo {
+        grid-column: span 2;
+
+        text-align: center;
+    }
+
+    .footer-logo p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-column h3::after {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 20px;
+    }
+
+    .footer-logo {
+        grid-column: span 1;
+
+        text-align: center;
+    }
+
+    .footer-logo h1 {
+        font-size: 26px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .contact p {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: 16px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-container {
+        padding: 30px 15px;
+    }
+
+    .footer-logo h1 {
+        font-size: 23px;
+    }
+
+    .footer-column h3 {
+        font-size: 19px;
+    }
+
+    .social a {
+        width: 38px;
+        height: 38px;
+    }
+}
+</style>
+<!-------------------Footer------------------------->
+
+<!---------------------------Footer Section-------------------------------->
+<footer> <div class="footer-container"> 
+  <div class="footer-logo"> <h1>Information <span>Technology</span></h1> 
+    <p>
+       Empowering innovation through modern technology, software development, web applications, networking, database management, cybersecurity, cloud computing, and digital transformation.
+
+We focus on creating reliable, efficient, and user-friendly technology solutions that help individuals and businesses achieve their goals.
+
+Our approach combines creativity, technical knowledge, and modern tools to develop smart digital solutions for today's fast-changing world. 
+    
+    </p> 
+      <div class="social"> 
+        <a><i class="fab fa-linkedin-in"></i></a> 
+        <a><i class="fab fa-facebook-f"></i></a> 
+        <a><i class="fab fa-x-twitter"></i></a> 
+        <a><i class="fab fa-whatsapp"></i></a> 
+      </div> </div> 
+      
+      <div class="footer-column"> 
+        <h3>Quick Links</h3> 
+        <ul> 
+        <li><a href="Home.html">Home</a></li> 
+        <li><a href="About.html">About </a></li> 
+        <li><a href="Services.html">Services</a></li> 
+        <li><a href="Contact.html">contact</a></li> 
+        <li><a href="Course.html">course</a></li> 
+        
+      </ul> 
+    </div> 
+    <div class="footer-column"> 
+      <h3>Our Services</h3> 
+      <ul> 
+        <li><a>Web Development</a></li> 
+        <li><a>Software Development</a></li> 
+        <li><a>Mobile App Development</a></li> 
+        <li><a>UI / UX Design</a></li> 
+        <li><a>Cloud Solutions</a></li> 
+      </ul> 
+    </div> 
+    <div class="footer-column contact"> 
+      <h3>Get In Touch</h3> 
+      <p><i class="fas fa-location-dot"></i> Dubai, United Arab Emirates </p> 
+      <p><i class="fas fa-phone"></i> +971 0527442274 </p> 
+      <p><i class="fas fa-envelope"></i> zeerintaj1712@gmail.com </p> 
+    </div> 
+  </div> 
+  <div class="footer-bottom"> © 2026 Information Technology. All Rights Reserved. </div> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</html>

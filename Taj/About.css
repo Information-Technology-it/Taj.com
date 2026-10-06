@@ -1,0 +1,316 @@
+
+
+/*---------------------------Whats App-----------------------------*/
+/*---------------------------------Whats app Icon-----------------------------------*/
+ html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* fix offset */
+        }
+
+
+
+
+.whatsapp-icon {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+  animation: bounce 1.5s infinite;
+  
+}
+
+
+.whatsapp-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes bounce {
+  0%   { transform: translateY(-50%) translateY(0); }
+  50%  { transform: translateY(-50%) translateY(-15px); }
+  100% { transform: translateY(-50%) translateY(0); }
+}
+
+
+@keyframes run {
+  0%   { transform: translateY(-50%) translateX(0); }
+  50%  { transform: translateY(-50%) translateX(-20px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
+
+@keyframes jump {
+  0%   { transform: translateY(-50%) translateY(0); }
+  50%  { transform: translateY(-50%) translateY(-30px); }
+  100% { transform: translateY(-50%) translateY(0); }
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(-50%) translateY(0); }
+  100% { transform: translateY(-50%) translateY(-10px); }
+}
+
+
+/*--------------------------------------end whats app Icon------------------------------*/
+/* RIGHT–CENTER */
+.whatsapp-icon {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    z-index: 9999;
+}
+
+
+/* ICON SIZE */
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ------------------------- */
+/*        ANIMATIONS         */
+/* ------------------------- */
+
+
+/* BOUNCE */
+.bounce {
+    animation: bounce 1.4s infinite ease-in-out;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(-50%) translateY(0); }
+    50% { transform: translateY(-50%) translateY(-15px); }
+}
+
+
+/* JUMP (HIGHER) */
+.jump {
+    animation: jump 1.2s infinite ease-in-out;
+}
+@keyframes jump {
+    0%, 100% { transform: translateY(-50%) translateY(0); }
+    50% { transform: translateY(-50%) translateY(-30px); }
+}
+
+
+/* RUN SIDE-TO-SIDE */
+.run {
+    animation: run 1.5s infinite ease-in-out;
+}
+@keyframes run {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(-20px); }
+}
+
+
+/* FLOAT (SMOOTH MOVE) */
+.float {
+    animation: float 2.5s infinite alternate ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(-50%) translateY(0); }
+    100% { transform: translateY(-50%) translateY(-12px); }
+}
+
+
+/* GLOW EFFECT */
+.glow img {
+    filter: drop-shadow(0 0 10px #25D366);
+}
+
+
+/*-----------------------------header------------------------------*
+
+
+/*---------------------------------------Fixed Navbar-------------------------------------------------*/
+
+
+
+/*--------------------------------------- End Fixed Navbar-------------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------Card Image---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+   
+}
+
+
+
+
+
+
+/*--------------------End Animation------------------*/
+.hero-text h2 {
+  font-size:85px;
+  color: #333;
+  animation: fadeIn 1s ease-in-out forwards;
+
+
+}
+.hero-text h2 span{
+    color:#38bdf8;
+    }
+
+
+.hero-text p {
+  margin: 20px 0;
+  font-size:25px;
+  color: #333;
+  font-style: italic;
+}
+.hero-text p span {
+ color:#38bdf8;
+}
+
+
+.hero-text button {
+  padding: 12px 30px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+/* Card container */
+.hero-card {
+  perspective: 1000px;
+}
+
+
+/* Card animation */
+.card-inner {
+  width: 300px;
+  height: 460px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  animation: rotateFloat 5s infinite ease-in-out;
+}
+
+
+.hero-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* Card faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+  border-radius: 20px;
+  backface-visibility: hidden;
+  box-shadow: 0 20px 50px rgba(56,189,248,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card-front img {
+  width: 190px;
+  height:250px;
+  margin-bottom: 10px;
+}
+
+
+.card-front h2 {
+  font-size: 36px;
+  color:#fff;
+}
+.card-front h3 {
+ 
+  color:#fff;
+}
+.card-front p {
+ 
+  color:#fff;
+}
+
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+
+.card-back ul {
+  list-style: none;
+}
+
+
+.card-back li {
+  margin: 10px 0;
+}
+
+
+/* Turning + floating animation */
+@keyframes rotateFloat {
+  0% { transform: rotateY(0) translateY(0); }
+  50% { transform: rotateY(10deg) translateY(-12px); }
+  100% { transform: rotateY(0) translateY(0); }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------End Card Image--------------------------------*/
+/*-------------------------------------About  Section-------------------------------*/
+
+
+
+/*-------------------------------------About  Section-------------------------------*/
+
+
+
+  
+
+/*--------------------Footer Section---------------------------*/

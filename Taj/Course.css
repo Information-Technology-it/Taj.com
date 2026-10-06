@@ -1,0 +1,160 @@
+
+
+/*---------------------------Whats App-----------------------------*/
+/*---------------------------------Whats app Icon-----------------------------------*/
+ html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* fix offset */
+           
+        }
+
+
+
+
+.whatsapp-icon {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+  animation: bounce 1.5s infinite;
+}
+
+
+.whatsapp-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes bounce {
+  0%   { transform: translateY(-50%) translateY(0); }
+  50%  { transform: translateY(-50%) translateY(-15px); }
+  100% { transform: translateY(-50%) translateY(0); }
+}
+
+
+@keyframes run {
+  0%   { transform: translateY(-50%) translateX(0); }
+  50%  { transform: translateY(-50%) translateX(-20px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
+
+@keyframes jump {
+  0%   { transform: translateY(-50%) translateY(0); }
+  50%  { transform: translateY(-50%) translateY(-30px); }
+  100% { transform: translateY(-50%) translateY(0); }
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(-50%) translateY(0); }
+  100% { transform: translateY(-50%) translateY(-10px); }
+}
+
+
+/*--------------------------------------end whats app Icon------------------------------*/
+/* RIGHT–CENTER */
+.whatsapp-icon {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    z-index: 9999;
+}
+
+
+/* ICON SIZE */
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ------------------------- */
+/*        ANIMATIONS         */
+/* ------------------------- */
+
+
+/* BOUNCE */
+.bounce {
+    animation: bounce 1.4s infinite ease-in-out;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(-50%) translateY(0); }
+    50% { transform: translateY(-50%) translateY(-15px); }
+}
+
+
+/* JUMP (HIGHER) */
+.jump {
+    animation: jump 1.2s infinite ease-in-out;
+}
+@keyframes jump {
+    0%, 100% { transform: translateY(-50%) translateY(0); }
+    50% { transform: translateY(-50%) translateY(-30px); }
+}
+
+
+/* RUN SIDE-TO-SIDE */
+.run {
+    animation: run 1.5s infinite ease-in-out;
+}
+@keyframes run {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(-20px); }
+}
+
+
+/* FLOAT (SMOOTH MOVE) */
+.float {
+    animation: float 2.5s infinite alternate ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(-50%) translateY(0); }
+    100% { transform: translateY(-50%) translateY(-12px); }
+}
+
+
+/* GLOW EFFECT */
+.glow img {
+    filter: drop-shadow(0 0 10px #25D366);
+}
+
+
+/*-----------------------------header------------------------------*
+
+
+/*---------------------------------------Fixed Navbar-------------------------------------------------*/
+/* Reset */
+
+
+
+
+/*--------------------------------------- End Fixed Navbar-------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+

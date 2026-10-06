@@ -1,0 +1,3632 @@
+
+
+<!-----------------------------Information Technology----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Information.com</title>
+
+  <link rel="stylesheet" href="Home.css">
+  <script src="script.js"></script>
+
+    
+
+
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+
+
+<!----  <meta http-equiv="content-type" content="text/html; charset=utf-8" />   ------>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link herf=" https//www.Information.com">
+<link herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<a href="https://wa.me/971527442274?text=Hello%20I%20would%20like%20more%20information" class="whatsapp-icon" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<a href="https://github.com/PHPMailer/PHPMailer/archive/refs/heads/master.zip"></a>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+<!---------------------------------------Fixed Navbar------------------------------------------------->
+
+
+
+  <style>
+    /* RESET */
+   
+span{
+    
+     color: white;
+}
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left:0;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      
+      background: linear-gradient(270deg, #000, #1270e3, #000, #1270e3);
+      background-size: 400% 400%;
+      animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* LOGO */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #fff;
+      font-size:25px;
+  font-weight: 600;
+      cursor: pointer;
+      left:0;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+
+      /* ANIMATION */
+      animation: floatLogo 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(18, 112, 227, 0.9));
+      transition: transform 0.6s ease;
+    }
+
+    
+
+    /* Floating animation */
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Rotate on hover */
+    .logo:hover img {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    /* MENU */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      padding: 5px 0;
+      nav-right: 30%;
+    }
+  .nav-menu a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 28px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        width:50%;
+        
+        background: linear-gradient(270deg, #043df7, #1270e3, #0764ce, #1270e3);
+        flex-direction: column;
+        align-items:center;
+        display: none;
+        padding: 20px 0;
+        border-radius: 50px;
+
+        animation: blueGlow 6s ease infinite;
+    }
+
+    @keyframes blueGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+    
+  </style>
+
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+      <span>Information<br>Technology</span>
+    </div>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="Home.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="About.html"><i class="fa fa-graduation-cap"></i> About</a></li>
+      <li><a href="Services.html"><i class="fa-brands fa-servicestack"></i> Services</a></li>
+      <li><a href="Contact.html"><i class="fa fa-id-card"></i> Contact</a></li>
+      <li><a href="Course.html"><i class="fas fa-laptop-code"></i> Course</a></li>
+      
+    </ul>
+
+  </nav>
+
+  <!-- JS -->
+  <script>
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("nav-menu");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+
+
+<!--------------------------------------- End Fixed Navbar------------------------------------------------->
+
+
+<!----------------------Animation----------Course-------------------------------------------->
+
+
+<style>
+/* ===== BODY ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background: #ffffff;
+  color: #333; /* dark gray text */
+ 
+}
+
+/* ===== SECTION ===== */
+.course-section {
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10%;
+  margin-top: 110px;
+
+}
+
+.course-section h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+ 
+}
+
+.course-section p {
+  color: #333;
+  margin-bottom: 60px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+
+/* ===== GRID ===== */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 cards per row */
+  gap: 30px;
+  perspective: 1200px;
+}
+
+/* ===== CARD ===== */
+.course-card {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 12px; /* slightly rounded rectangle */
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  cursor: pointer;
+  color: #fff;
+
+  /* Slide-up animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 0.8s forwards;
+}
+
+.course-card:hover {
+  transform: rotateY(8deg) rotateX(4deg) scale(1.05);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.25);
+}
+
+/* ===== IMAGE PLACEHOLDER ===== */
+.course-image {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== CONTENT ===== */
+.course-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.course-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.course-content ul {
+  margin: 0 0 10px 18px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.course-content ul li {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.course-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: #f0f0f0;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+/* Tablet: 2 cards per row */
+@media (max-width: 1024px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .course-section h1 {
+    font-size: 2rem;
+  }
+
+  .course-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-content ul li, .course-content p {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+
+<section class="course-section">
+  <h1>Animation Courses</h1>
+  <p>Explore various animation courses and master different animation styles with hands-on projects and real-world applications.</p>
+
+  <div class="course-grid">
+
+    <!-- COURSE 1 -->
+    <div class="course-card">
+      <div class="course-image">2D</div>
+      <div class="course-content">
+        <h3>Traditional / 2D Animation</h3>
+        <ul>
+          <li>Hand-drawn frame-by-frame animation</li>
+          <li>Character animation fundamentals</li>
+          <li>Storyboarding and timing</li>
+          <li>Pencil-to-paper animation</li>
+        </ul>
+        <p>This course teaches foundational principles of 2D animation, focusing on traditional hand-drawn methods.</p>
+        <p>Students will practice timing, spacing, and creating expressive movements to bring characters and scenes to life.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 2 -->
+    <div class="course-card">
+      <div class="course-image">2D</div>
+      <div class="course-content">
+        <h3>Digital / 2D Animation</h3>
+        <ul>
+          <li>Adobe Animate courses</li>
+          <li>Toon Boom Harmony</li>
+          <li>Vector-based animation</li>
+          <li>Cut-out animation</li>
+        </ul>
+        <p>Learn modern 2D animation using digital tools to create polished animations efficiently.</p>
+        <p>This course covers vector animation, cut-out techniques, and prepares students for professional workflows.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 3 -->
+    <div class="course-card">
+      <div class="course-image">3D</div>
+      <div class="course-content">
+        <h3>3D Animation</h3>
+        <ul>
+          <li>Blender (free, open-source)</li>
+          <li>Autodesk Maya</li>
+          <li>Cinema 4D</li>
+          <li>3D character rigging & modeling</li>
+          <li>3D environment animation</li>
+        </ul>
+        <p>Explore 3D animation by modeling, rigging, and animating characters and objects in a 3D space.</p>
+        <p>Students learn realistic movements, environments, and virtual world creation using industry software.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 4 -->
+    <div class="course-card">
+      <div class="course-image">MG</div>
+      <div class="course-content">
+        <h3>Motion Graphics</h3>
+        <ul>
+          <li>Adobe After Effects</li>
+          <li>Kinetic typography</li>
+          <li>Animated infographics</li>
+          <li>Logo animation</li>
+          <li>UI/UX animation</li>
+        </ul>
+        <p>Create dynamic visuals using motion graphics for advertising, presentations, and UI design.</p>
+        <p>Students will learn animation techniques to enhance storytelling and engagement through graphics.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 5 -->
+    <div class="course-card">
+      <div class="course-image">Game</div>
+      <div class="course-content">
+        <h3>Game Animation</h3>
+        <ul>
+          <li>Unity animation pipelines</li>
+          <li>Unreal Engine animation</li>
+          <li>Character rigging for games</li>
+          <li>Physics-based animation</li>
+        </ul>
+        <p>Focus on animations for interactive environments and video games using Unity and Unreal engines.</p>
+        <p>Learn rigging, motion cycles, and physics-based animation for realistic game characters.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 6 -->
+    <div class="course-card">
+      <div class="course-image">VFX</div>
+      <div class="course-content">
+        <h3>Visual Effects (VFX)</h3>
+        <ul>
+          <li>Compositing (Nuke, After Effects)</li>
+          <li>Particle effects & simulations</li>
+          <li>Match-moving & rotoscoping</li>
+          <li>CG integration with live footage</li>
+        </ul>
+        <p>Learn visual effects used in films, including compositing and integrating 3D elements.</p>
+        <p>Students learn particle simulations, rotoscoping, and CG integration for professional VFX projects.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 7 -->
+    <div class="course-card">
+      <div class="course-image">SM</div>
+      <div class="course-content">
+        <h3>Stop Motion / Practical Animation</h3>
+        <ul>
+          <li>Claymation / Puppet animation</li>
+          <li>Object & paper cut-out animation</li>
+          <li>Frame-by-frame camera work</li>
+          <li>Lighting & camera techniques</li>
+        </ul>
+        <p>Learn hands-on animation techniques using puppets, clay, and physical objects.</p>
+        <p>Students develop frame-by-frame animation skills while understanding lighting and camera setup.</p>
+      </div>
+    </div>
+
+    <!-- COURSE 8 -->
+    <div class="course-card">
+      <div class="course-image">Special</div>
+      <div class="course-content">
+        <h3>Specialized / Niche Courses</h3>
+        <ul>
+          <li>2D/3D animation for advertising</li>
+          <li>Medical or scientific animation</li>
+          <li>Architectural / engineering animation</li>
+          <li>AR/VR animation</li>
+        </ul>
+        <p>Explore specialized animation fields for professional applications like advertising and scientific visualization.</p>
+        <p>Students learn to tailor animation techniques for niche requirements and immersive experiences.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!------------------------Animaion End--------------------------->
+
+
+
+
+
+<!----------------------------------------20 Course list---------------------------------------------------------->
+
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f7;
+    
+    
+    
+    
+}
+h1{
+    text-align:center;
+    padding:20px;
+    background:#007bff;
+    color:#fff;
+    margin:0;
+  
+}
+
+/* Layout */
+.main{
+    display:flex;
+    height:calc(100vh - 80px);
+}
+
+/* Left Panel */
+.left{
+    width:35%;
+    background:#333;
+    color:#fff;
+    overflow-y:auto;
+}
+.course{
+    padding:14px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    cursor:pointer;
+    transition:0.3s;
+}
+.course:hover{
+    background:#007bff;
+}
+
+/* Right Panel */
+.right{
+    width:65%;
+    padding:30px;
+    background:#fff;
+    overflow-y:auto;
+    position: relative;
+}
+
+/* Animated content wrapper */
+.right-content {
+    opacity:0;
+    transform:translateX(50px);
+    animation-fill-mode:forwards;
+}
+
+.right h2{
+    color:#007bff;
+}
+ul{
+    padding-left:20px;
+}
+li{
+    margin:8px 0;
+    font-size:16px;
+}
+
+/* Animation keyframes */
+@keyframes slideFadeIn{
+    0%{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .main{
+        flex-direction:column;
+    }
+    .left,.right{
+        width:100%;
+        height:auto;
+    }
+}
+</style>
+<!-----------spaces------------->
+
+<div class="shape-divider-bottom">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0V46.29c47.79,22,103.59,32.17,158,28C230.41,69.4,284.06,37.73,339,18.16,423.71,-12.37,510.63,-19.16,594,0c69.76,16.12,136.77,49.56,207,57.53,92.28,10.47,184.82,-16.78,259,-49.09V0Z"></path>
+  </svg>
+</div>
+<style>
+    .shape-divider-bottom svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  fill: #ffffff;
+}
+
+</style>
+
+
+
+<h1>Complete IT & Computer Science Curriculum – 20 Courses</h1>
+
+
+<div class="main">
+
+    <!-- Left Panel -->
+    <div class="left">
+        <div class="course" onclick="loadCourse(1)">Course 1: Introduction to Computer Systems</div>
+        <div class="course" onclick="loadCourse(2)">Course 2: Programming Fundamentals</div>
+        <div class="course" onclick="loadCourse(3)">Course 3: C Programming</div>
+        <div class="course" onclick="loadCourse(4)">Course 4: Advanced C Programming</div>
+        <div class="course" onclick="loadCourse(5)">Course 5: OOP Concepts</div>
+        <div class="course" onclick="loadCourse(6)">Course 6: C++ Programming</div>
+        <div class="course" onclick="loadCourse(7)">Course 7: C# Programming</div>
+        <div class="course" onclick="loadCourse(8)">Course 8: Java Programming</div>
+        <div class="course" onclick="loadCourse(9)">Course 9: Scripting Languages</div>
+        <div class="course" onclick="loadCourse(10)">Course 10: JavaScript</div>
+        <div class="course" onclick="loadCourse(11)">Course 11: Web Technologies</div>
+        <div class="course" onclick="loadCourse(12)">Course 12: PHP Programming</div>
+        <div class="course" onclick="loadCourse(13)">Course 13: DBMS</div>
+        <div class="course" onclick="loadCourse(14)">Course 14: SQL</div>
+        <div class="course" onclick="loadCourse(15)">Course 15: Advanced Databases</div>
+        <div class="course" onclick="loadCourse(16)">Course 16: Software Engineering</div>
+        <div class="course" onclick="loadCourse(17)">Course 17: Software Testing & QA</div>
+        <div class="course" onclick="loadCourse(18)">Course 18: Multimedia Systems</div>
+        <div class="course" onclick="loadCourse(19)">Course 19: Advanced Multimedia</div>
+        <div class="course" onclick="loadCourse(20)">Course 20: Mini Project / Capstone</div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right" id="content">
+        <div class="right-content">
+            <h2>Select a course</h2>
+            <p>Click any course from the left panel to view details.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const data = {
+1: {
+    title: "Course 1:",
+    content: `
+         <header>
+        <h1>Course 1: Introduction to Computer Systems</h1>
+        <p>Foundational understanding of how computer systems work</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Course Description</h2>
+            <p>
+                Introduction to Computer Systems is a foundational course that explains how computers
+                work internally. It introduces students to computer hardware, software, data
+                representation, and basic operating system concepts. The course helps learners
+                understand how different components of a computer system interact to process data
+                and execute programs.
+            </p>
+        </section>
+
+        <section>
+            <h2>Course Objectives</h2>
+            <ul>
+                <li>Understand the basic structure and functioning of a computer system</li>
+                <li>Identify and explain key hardware components</li>
+                <li>Understand how data is represented and processed in computers</li>
+                <li>Explain the role of software and operating systems</li>
+                <li>Gain basic knowledge of computer performance and system efficiency</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Course Contents</h2>
+
+            <h3>1. Overview of Computer Systems</h3>
+            <ul>
+                <li>Definition of a computer system</li>
+                <li>Evolution of computers (brief history)</li>
+                <li>Types of computers (desktop, laptop, mobile, servers)</li>
+                <li>Basic functions: input, processing, output, and storage</li>
+            </ul>
+
+            <h3>2. Computer Hardware Components</h3>
+            <ul>
+                <li>Input devices: keyboard, mouse, scanner, microphone</li>
+                <li>Output devices: monitor, printer, speakers</li>
+                <li>CPU: ALU, Control Unit, Registers</li>
+                <li>Memory: RAM, ROM, HDD, SSD, USB drives</li>
+            </ul>
+
+            <h3>3. Data Representation</h3>
+            <ul>
+                <li>Binary number system</li>
+                <li>Bits and bytes</li>
+                <li>Representation of numbers, characters, images, and sound</li>
+                <li>ASCII and Unicode</li>
+            </ul>
+
+            <h3>4. Software Systems</h3>
+            <ul>
+                <li>Definition of software</li>
+                <li>System software and application software</li>
+                <li>Introduction to programming languages</li>
+                <li>Compilers and interpreters</li>
+            </ul>
+
+            <h3>5. Operating System Basics</h3>
+            <ul>
+                <li>Functions of an operating system</li>
+                <li>Process and memory management</li>
+                <li>File systems and storage management</li>
+                <li>Examples: Windows, Linux, macOS</li>
+            </ul>
+
+            <h3>6. Computer Performance and Efficiency</h3>
+            <ul>
+                <li>CPU speed, memory, and storage</li>
+                <li>System optimization</li>
+                <li>Efficient resource usage</li>
+            </ul>
+
+            <h3>7. Computer System Organization</h3>
+            <ul>
+                <li>Component communication</li>
+                <li>Buses and architecture</li>
+                <li>Cache memory</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Teaching Methodology</h2>
+            <ul>
+                <li>Lectures and presentations</li>
+                <li>Demonstrations using real computer systems</li>
+                <li>Basic practical exercises</li>
+                <li>Assignments and quizzes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment Methods</h2>
+            <ul>
+                <li>Written examinations</li>
+                <li>Quizzes and assignments</li>
+                <li>Practical demonstrations</li>
+            </ul>
+        </section>
+    `
+},
+2:{title:"Course 2: ",
+   content:`
+   <header>
+    <h1>Course 2: Programming Fundamentals</h1>
+    <p>Building the foundation of problem-solving and coding skills</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Course Description</h2>
+        <p>
+            Programming Fundamentals introduces students to the basic concepts of computer
+            programming. The course focuses on developing logical thinking and problem-solving
+            skills using structured programming techniques. Students learn how to write, test,
+            and debug simple programs using a high-level programming language.
+        </p>
+    </section>
+
+    <section>
+        <h2>Course Objectives</h2>
+        <ul>
+            <li>Understand basic programming concepts and terminology</li>
+            <li>Develop logical thinking and problem-solving skills</li>
+            <li>Write simple programs using structured programming</li>
+            <li>Understand control structures such as loops and conditions</li>
+            <li>Learn basic debugging and error-handling techniques</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Course Contents</h2>
+
+        <h3>1. Introduction to Programming</h3>
+        <ul>
+            <li>What is programming?</li>
+            <li>Importance of programming</li>
+            <li>Types of programming languages</li>
+            <li>High-level vs low-level languages</li>
+        </ul>
+
+        <h3>2. Problem Solving and Algorithms</h3>
+        <ul>
+            <li>Problem analysis</li>
+            <li>Steps in problem solving</li>
+            <li>Algorithms and flowcharts</li>
+            <li>Pseudocode</li>
+        </ul>
+
+        <h3>3. Basic Programming Concepts</h3>
+        <ul>
+            <li>Variables and constants</li>
+            <li>Data types</li>
+            <li>Operators and expressions</li>
+            <li>Input and output statements</li>
+        </ul>
+
+        <h3>4. Control Structures</h3>
+        <ul>
+            <li>Conditional statements (if, if-else, switch)</li>
+            <li>Loops (for, while, do-while)</li>
+            <li>Nested control structures</li>
+        </ul>
+
+        <h3>5. Functions and Modular Programming</h3>
+        <ul>
+            <li>Introduction to functions</li>
+            <li>Function definition and calling</li>
+            <li>Parameters and return values</li>
+            <li>Benefits of modular programming</li>
+        </ul>
+
+        <h3>6. Arrays and Strings</h3>
+        <ul>
+            <li>Introduction to arrays</li>
+            <li>One-dimensional arrays</li>
+            <li>Basic string handling</li>
+        </ul>
+
+        <h3>7. Debugging and Program Testing</h3>
+        <ul>
+            <li>Types of errors (syntax, logical, runtime)</li>
+            <li>Debugging techniques</li>
+            <li>Testing and validation</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Teaching Methodology</h2>
+        <ul>
+            <li>Lectures and interactive discussions</li>
+            <li>Live coding demonstrations</li>
+            <li>Hands-on programming exercises</li>
+            <li>Assignments and quizzes</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Assessment Methods</h2>
+        <ul>
+            <li>Written examinations</li>
+            <li>Programming assignments</li>
+            <li>Quizzes</li>
+            <li>Practical coding tests</li>
+        </ul>
+    </section>
+
+</main>
+   `
+},
+3:{title:"Course 3: ",
+  content: ` 
+        <h1>Course 3: C Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        C Programming is a core programming course that introduces students to the C language,
+        one of the most powerful and widely used programming languages. The course focuses on
+        problem-solving skills, program design, and understanding how programs interact with
+        computer hardware. C is the foundation for many modern languages and system software.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the basics of C programming language</li>
+        <li>Write, compile, and execute C programs</li>
+        <li>Use programming logic to solve problems</li>
+        <li>Understand memory usage and data handling in C</li>
+        <li>Develop structured and modular programs</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to C Programming</h3>
+    <ul>
+        <li>History and importance of C language</li>
+        <li>Features of C (simple, fast, portable)</li>
+        <li>Applications of C (system software, embedded systems)</li>
+        <li>Structure of a C program</li>
+        <li>Compilation process (source code → executable)</li>
+    </ul>
+
+    <h3>2. Basic Elements of C</h3>
+    <ul>
+        <li>Keywords and identifiers</li>
+        <li>Variables and constants</li>
+        <li>Data types (int, float, char, double)</li>
+        <li>Input and output functions (printf, scanf)</li>
+        <li>Comments and formatting</li>
+    </ul>
+
+    <h3>3. Operators and Expressions</h3>
+    <ul>
+        <li>Arithmetic operators</li>
+        <li>Relational and logical operators</li>
+        <li>Assignment and conditional operators</li>
+        <li>Operator precedence and expressions</li>
+    </ul>
+
+    <h3>4. Control Statements</h3>
+    <ul>
+        <li>Decision making: if, if-else, switch</li>
+        <li>Looping statements: for, while, do-while</li>
+        <li>Use of break and continue</li>
+    </ul>
+
+    <h3>5. Functions</h3>
+    <ul>
+        <li>Concept of functions</li>
+        <li>Function declaration, definition, and call</li>
+        <li>Parameters and return values</li>
+        <li>Recursive functions</li>
+        <li>Advantages of modular programming</li>
+    </ul>
+
+    <h3>6. Arrays and Strings</h3>
+    <ul>
+        <li>One-dimensional and two-dimensional arrays</li>
+        <li>String handling and string functions</li>
+        <li>Passing arrays to functions</li>
+    </ul>
+
+    <h3>7. Pointers</h3>
+    <ul>
+        <li>Introduction to pointers</li>
+        <li>Pointer variables and memory addresses</li>
+        <li>Pointers and arrays</li>
+        <li>Call by value vs. call by reference</li>
+    </ul>
+
+    <h3>8. Structures and Unions</h3>
+    <ul>
+        <li>Definition and use of structures</li>
+        <li>Arrays of structures</li>
+        <li>Difference between structures and unions</li>
+    </ul>
+
+    <h3>9. File Handling</h3>
+    <ul>
+        <li>Concept of files</li>
+        <li>File operations (open, read, write, close)</li>
+        <li>File modes</li>
+        <li>Applications of file handling</li>
+    </ul>
+
+    <h3>10. Error Handling and Debugging (Basic)</h3>
+    <ul>
+        <li>Common programming errors</li>
+        <li>Logical vs. syntax errors</li>
+        <li>Basic debugging techniques</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Classroom lectures</li>
+        <li>Live coding demonstrations</li>
+        <li>Lab sessions and practical exercises</li>
+        <li>Assignments and mini-projects</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written tests</li>
+        <li>Programming assignments</li>
+        <li>Practical lab examinations</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+   `
+  },
+4:{title:"Course 4:",
+   content:`
+     <h1>Course 4: Advanced C Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        Advanced C Programming builds on basic C programming knowledge and focuses on advanced
+        concepts used in real-world and system-level programming. The course emphasizes efficient
+        memory management, complex data structures, advanced file handling, and program optimization.
+        It prepares students for system software, embedded systems, and advanced programming courses.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Use advanced features of the C language effectively</li>
+        <li>Manage memory dynamically</li>
+        <li>Work with complex data structures</li>
+        <li>Perform advanced file operations</li>
+        <li>Write optimized and secure C programs</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Review of C Fundamentals</h3>
+    <ul>
+        <li>Data types, operators, and control statements</li>
+        <li>Functions, arrays, pointers, and structures</li>
+        <li>Common programming mistakes and best practices</li>
+    </ul>
+
+    <h3>2. Advanced Pointers</h3>
+    <ul>
+        <li>Pointers to pointers</li>
+        <li>Function pointers</li>
+        <li>Pointers with structures and arrays</li>
+        <li>Dynamic memory and pointer arithmetic</li>
+    </ul>
+
+    <h3>3. Dynamic Memory Management</h3>
+    <ul>
+        <li>Need for dynamic memory allocation</li>
+        <li>malloc(), calloc(), realloc(), and free()</li>
+        <li>Memory leaks and their prevention</li>
+        <li>Heap vs. stack memory</li>
+    </ul>
+
+    <h3>4. Advanced Data Structures</h3>
+    <ul>
+        <li>Linked lists (singly, doubly, circular)</li>
+        <li>Stack and queue implementation</li>
+        <li>Introduction to trees and graphs (basic concepts)</li>
+        <li>Applications of data structures</li>
+    </ul>
+
+    <h3>5. Preprocessor Directives and Macros</h3>
+    <ul>
+        <li>#define, #include, #undef</li>
+        <li>Macros with arguments</li>
+        <li>Conditional compilation</li>
+        <li>Header files and modular programming</li>
+    </ul>
+
+    <h3>6. Advanced File Handling</h3>
+    <ul>
+        <li>Text files vs. binary files</li>
+        <li>File pointers and random access</li>
+        <li>Functions: fseek(), ftell(), rewind()</li>
+        <li>Error handling in file operations</li>
+    </ul>
+
+    <h3>7. Structures, Unions, and Bit Fields</h3>
+    <ul>
+        <li>Nested structures</li>
+        <li>Structures with pointers</li>
+        <li>Bit fields and their applications</li>
+        <li>Memory alignment and optimization</li>
+    </ul>
+
+    <h3>8. Command Line Arguments</h3>
+    <ul>
+        <li>argc and argv</li>
+        <li>Passing arguments to programs</li>
+        <li>Practical use cases</li>
+    </ul>
+
+    <h3>9. Error Handling and Debugging</h3>
+    <ul>
+        <li>Types of runtime errors</li>
+        <li>Using return codes and errno</li>
+        <li>Debugging tools and techniques (basic)</li>
+    </ul>
+
+    <h3>10. Program Optimization and Best Practices</h3>
+    <ul>
+        <li>Code efficiency and performance</li>
+        <li>Writing readable and maintainable code</li>
+        <li>Secure coding practices</li>
+        <li>Introduction to portability</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Advanced coding demonstrations</li>
+        <li>Hands-on lab exercises</li>
+        <li>Problem-solving sessions</li>
+        <li>Mini-projects and case studies</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written examinations</li>
+        <li>Programming assignments</li>
+        <li>Practical lab tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+   
+   `
+  },
+5:{title:"Course 5:",
+  content: ` 
+  
+    <h1>Course 5: Object-Oriented Programming Concepts</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        Object-Oriented Programming (OOP) Concepts introduces a modern approach to software development
+        based on objects and classes. This course explains how OOP improves program structure, reusability,
+        security, and maintainability. The concepts learned here form the foundation for object-oriented
+        languages such as C++, Java, Python, and C#.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the principles of object-oriented programming</li>
+        <li>Design programs using classes and objects</li>
+        <li>Apply OOP concepts to solve real-world problems</li>
+        <li>Improve code reusability and maintainability</li>
+        <li>Prepare for learning object-oriented languages</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to Object-Oriented Programming</h3>
+    <ul>
+        <li>Limitations of procedural programming</li>
+        <li>Need for OOP</li>
+        <li>Basic OOP terminology</li>
+        <li>Comparison of procedural vs. object-oriented approach</li>
+    </ul>
+
+    <h3>2. Classes and Objects</h3>
+    <ul>
+        <li>Definition of a class</li>
+        <li>Creating objects</li>
+        <li>Data members and member functions</li>
+        <li>Accessing class members</li>
+        <li>Real-world examples of classes and objects</li>
+    </ul>
+
+    <h3>3. Encapsulation</h3>
+    <ul>
+        <li>Concept of data hiding</li>
+        <li>Access specifiers (public, private, protected)</li>
+        <li>Advantages of encapsulation</li>
+        <li>Security and data protection</li>
+    </ul>
+
+    <h3>4. Abstraction</h3>
+    <ul>
+        <li>Meaning of abstraction</li>
+        <li>Abstract classes and interfaces (conceptual)</li>
+        <li>Benefits of abstraction</li>
+        <li>Hiding implementation details</li>
+    </ul>
+
+    <h3>5. Inheritance</h3>
+    <ul>
+        <li>Concept of inheritance</li>
+        <li>Types of inheritance (single, multiple, multilevel, hierarchical)</li>
+        <li>Reusability of code</li>
+        <li>Advantages and limitations</li>
+    </ul>
+
+    <h3>6. Polymorphism</h3>
+    <ul>
+        <li>Meaning of polymorphism</li>
+        <li>Compile-time polymorphism (function overloading)</li>
+        <li>Run-time polymorphism (method overriding)</li>
+        <li>Advantages of polymorphism</li>
+    </ul>
+
+    <h3>7. Constructors and Destructors</h3>
+    <ul>
+        <li>Purpose of constructors</li>
+        <li>Types of constructors</li>
+        <li>Destructor concept</li>
+        <li>Object initialization and cleanup</li>
+    </ul>
+
+    <h3>8. Dynamic Binding and Message Passing</h3>
+    <ul>
+        <li>Dynamic binding (late binding)</li>
+        <li>Message passing between objects</li>
+        <li>Role in flexible program design</li>
+    </ul>
+
+    <h3>9. Object-Oriented Design Basics</h3>
+    <ul>
+        <li>Identifying classes and objects</li>
+        <li>Relationship between objects</li>
+        <li>Introduction to UML diagrams (basic idea)</li>
+        <li>Designing simple OOP-based systems</li>
+    </ul>
+
+    <h3>10. Applications of OOP</h3>
+    <ul>
+        <li>Software development</li>
+        <li>Game development</li>
+        <li>Web and mobile applications</li>
+        <li>Real-world system modeling</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Conceptual lectures with examples</li>
+        <li>Object-based problem solving</li>
+        <li>Demonstrations using OOP languages</li>
+        <li>Assignments and case studies</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written examinations</li>
+        <li>Concept-based assignments</li>
+        <li>Practical programming tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+  
+  `
+
+
+},
+6:{title:"Course 6:",
+  content:  ` 
+  
+    <h1>Course 6: C++ Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        C++ Programming is an advanced programming course that combines procedural and object-oriented
+        programming concepts. It introduces students to C++ syntax, classes, objects, inheritance,
+        polymorphism, and templates. The course emphasizes real-world problem solving and software
+        development using C++.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Write C++ programs using procedural and object-oriented techniques</li>
+        <li>Apply classes, objects, inheritance, and polymorphism in programs</li>
+        <li>Use advanced features like templates and exception handling</li>
+        <li>Develop modular, reusable, and efficient software solutions</li>
+        <li>Transition to software development and advanced programming courses</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to C++</h3>
+    <ul>
+        <li>History and evolution of C++</li>
+        <li>Features of C++</li>
+        <li>Comparison of C and C++</li>
+        <li>Structure of a C++ program</li>
+        <li>Compilation and execution process</li>
+    </ul>
+
+    <h3>2. Basics of C++ Programming</h3>
+    <ul>
+        <li>Keywords, identifiers, and data types</li>
+        <li>Variables and constants</li>
+        <li>Input/output using cin and cout</li>
+        <li>Operators and expressions</li>
+        <li>Control statements (if, switch, loops)</li>
+    </ul>
+
+    <h3>3. Functions in C++</h3>
+    <ul>
+        <li>Function declaration, definition, and call</li>
+        <li>Default arguments and function overloading</li>
+        <li>Inline functions</li>
+        <li>Recursion</li>
+        <li>Pass by value vs. pass by reference</li>
+    </ul>
+
+    <h3>4. Object-Oriented Programming in C++</h3>
+    <ul>
+        <li>Classes and objects</li>
+        <li>Member functions and data members</li>
+        <li>Constructors and destructors</li>
+        <li>Access specifiers (public, private, protected)</li>
+        <li>Encapsulation and data hiding</li>
+    </ul>
+
+    <h3>5. Inheritance and Polymorphism</h3>
+    <ul>
+        <li>Types of inheritance: single, multiple, multilevel, hierarchical</li>
+        <li>Base and derived classes</li>
+        <li>Function overriding</li>
+        <li>Virtual functions and run-time polymorphism</li>
+        <li>Advantages of code reusability</li>
+    </ul>
+
+    <h3>6. Operator Overloading</h3>
+    <ul>
+        <li>Concept of operator overloading</li>
+        <li>Overloading arithmetic, relational, and assignment operators</li>
+        <li>Rules and best practices</li>
+    </ul>
+
+    <h3>7. Templates and Generic Programming</h3>
+    <ul>
+        <li>Function templates</li>
+        <li>Class templates</li>
+        <li>Benefits of reusable and type-independent code</li>
+    </ul>
+
+    <h3>8. Exception Handling</h3>
+    <ul>
+        <li>Concept of exceptions</li>
+        <li>try, catch, and throw statements</li>
+        <li>Handling runtime errors safely</li>
+    </ul>
+
+    <h3>9. File Handling in C++</h3>
+    <ul>
+        <li>Text and binary files</li>
+        <li>File streams (ifstream, ofstream, fstream)</li>
+        <li>Reading and writing files</li>
+        <li>Error handling in file operations</li>
+    </ul>
+
+    <h3>10. Standard Template Library (STL) – Introduction</h3>
+    <ul>
+        <li>Concept of STL</li>
+        <li>Containers (vectors, lists)</li>
+        <li>Iterators</li>
+        <li>Basic algorithms (sorting, searching)</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with examples</li>
+        <li>Live coding demonstrations</li>
+        <li>Hands-on lab exercises</li>
+        <li>Assignments, mini-projects, and case studies</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written examinations</li>
+        <li>Practical programming assignments</li>
+        <li>Lab tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+  `
+},
+7:{title:"Course 7: ",
+  content: `
+      <h1>Course 7: C# Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        C# Programming introduces students to C# (C-Sharp), a modern, object-oriented programming language
+        developed by Microsoft. C# is widely used for Windows applications, web development, and game
+        development with Unity. This course covers both basic and advanced concepts, including
+        object-oriented principles, data types, exception handling, and GUI programming.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the syntax and structure of C# programs</li>
+        <li>Apply object-oriented programming concepts in C#</li>
+        <li>Develop desktop, console, and basic GUI applications</li>
+        <li>Use exception handling and file operations effectively</li>
+        <li>Prepare for software development in the .NET framework</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to C#</h3>
+    <ul>
+        <li>Overview and history of C#</li>
+        <li>Features of C# (modern, simple, type-safe)</li>
+        <li>C# and .NET framework</li>
+        <li>Comparison with C, C++, and Java</li>
+    </ul>
+
+    <h3>2. Basics of C# Programming</h3>
+    <ul>
+        <li>Variables, constants, and data types</li>
+        <li>Operators and expressions</li>
+        <li>Input and output (Console.ReadLine(), Console.WriteLine())</li>
+        <li>Control statements (if, switch, loops)</li>
+    </ul>
+
+    <h3>3. Functions and Methods</h3>
+    <ul>
+        <li>Method declaration and definition</li>
+        <li>Passing parameters (by value and by reference)</li>
+        <li>Method overloading</li>
+        <li>Recursive methods</li>
+    </ul>
+
+    <h3>4. Object-Oriented Programming in C#</h3>
+    <ul>
+        <li>Classes and objects</li>
+        <li>Fields, properties, and methods</li>
+        <li>Constructors and destructors</li>
+        <li>Encapsulation using access modifiers</li>
+        <li>Static members</li>
+    </ul>
+
+    <h3>5. Inheritance and Polymorphism</h3>
+    <ul>
+        <li>Base and derived classes</li>
+        <li>Method overriding</li>
+        <li>Virtual and abstract methods</li>
+        <li>Interfaces in C#</li>
+        <li>Code reusability and modularity</li>
+    </ul>
+
+    <h3>6. Exception Handling</h3>
+    <ul>
+        <li>Understanding exceptions</li>
+        <li>try, catch, finally, and throw statements</li>
+        <li>Custom exceptions</li>
+        <li>Best practices for error handling</li>
+    </ul>
+
+    <h3>7. Collections and Generics</h3>
+    <ul>
+        <li>Arrays, lists, dictionaries</li>
+        <li>Generic classes and methods</li>
+        <li>Benefits of using collections</li>
+        <li>Iterating through collections</li>
+    </ul>
+
+    <h3>8. File Handling</h3>
+    <ul>
+        <li>Reading from and writing to files</li>
+        <li>StreamReader and StreamWriter classes</li>
+        <li>Handling text and binary files</li>
+        <li>Exception handling in file operations</li>
+    </ul>
+
+    <h3>9. Delegates and Events (Basic Concept)</h3>
+    <ul>
+        <li>Delegates and their use</li>
+        <li>Events and event-driven programming</li>
+        <li>Simple event handling in C#</li>
+    </ul>
+
+    <h3>10. Introduction to GUI Programming (Optional/Basic)</h3>
+    <ul>
+        <li>Using Windows Forms</li>
+        <li>Creating basic forms and controls</li>
+        <li>Event-driven programming</li>
+        <li>Simple user interface applications</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Conceptual lectures with examples</li>
+        <li>Hands-on coding exercises</li>
+        <li>Practical assignments and mini-projects</li>
+        <li>Demonstration of GUI and console-based applications</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written examinations</li>
+        <li>Programming assignments</li>
+        <li>Lab practical tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+  `
+
+},
+8:{title:"Course 8:",
+ content:  ` 
+ 
+    <h1>Course 8: Java Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        Java Programming introduces students to Java, a widely used, platform-independent, object-oriented
+        programming language. The course covers Java syntax, object-oriented concepts, exception handling,
+        file handling, and GUI development. Java is used in web applications, mobile apps (Android), and
+        enterprise software, making it highly relevant for modern software development.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand Java syntax and basic programming concepts</li>
+        <li>Apply object-oriented programming principles in Java</li>
+        <li>Develop console-based and GUI applications</li>
+        <li>Handle exceptions, files, and data efficiently</li>
+        <li>Prepare for advanced Java development or Android programming</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to Java</h3>
+    <ul>
+        <li>History and features of Java</li>
+        <li>Java Virtual Machine (JVM), Java Runtime Environment (JRE), Java Development Kit (JDK)</li>
+        <li>Platform independence</li>
+        <li>Comparison with C++ and C#</li>
+    </ul>
+
+    <h3>2. Basics of Java Programming</h3>
+    <ul>
+        <li>Variables, constants, and data types</li>
+        <li>Operators and expressions</li>
+        <li>Input and output (Scanner class, System.out.println)</li>
+        <li>Control statements (if, switch, loops)</li>
+    </ul>
+
+    <h3>3. Methods and Functions</h3>
+    <ul>
+        <li>Method declaration, definition, and calling</li>
+        <li>Pass by value</li>
+        <li>Method overloading</li>
+        <li>Recursion</li>
+    </ul>
+
+    <h3>4. Object-Oriented Programming in Java</h3>
+    <ul>
+        <li>Classes and objects</li>
+        <li>Fields (attributes) and methods</li>
+        <li>Constructors and the this keyword</li>
+        <li>Access modifiers (public, private, protected)</li>
+        <li>Encapsulation and data hiding</li>
+    </ul>
+
+    <h3>5. Inheritance and Polymorphism</h3>
+    <ul>
+        <li>Base (superclass) and derived (subclass)</li>
+        <li>extends keyword</li>
+        <li>Method overriding</li>
+        <li>Polymorphism (compile-time and run-time)</li>
+        <li>super keyword and code reusability</li>
+    </ul>
+
+    <h3>6. Interfaces and Abstract Classes</h3>
+    <ul>
+        <li>Abstract classes</li>
+        <li>Abstract methods</li>
+        <li>Interfaces and implementation</li>
+        <li>Multiple inheritance through interfaces</li>
+    </ul>
+
+    <h3>7. Exception Handling</h3>
+    <ul>
+        <li>Understanding exceptions</li>
+        <li>try, catch, finally, throw, and throws</li>
+        <li>Checked vs. unchecked exceptions</li>
+        <li>Creating custom exceptions</li>
+    </ul>
+
+    <h3>8. Arrays and Collections</h3>
+    <ul>
+        <li>One-dimensional and multi-dimensional arrays</li>
+        <li>ArrayList, LinkedList, HashMap</li>
+        <li>Iterating through collections</li>
+        <li>Benefits of using Java collections</li>
+    </ul>
+
+    <h3>9. File Handling and I/O</h3>
+    <ul>
+        <li>Reading from and writing text files</li>
+        <li>Using FileReader, FileWriter, BufferedReader, BufferedWriter</li>
+        <li>Handling exceptions in file operations</li>
+    </ul>
+
+    <h3>10. GUI Programming (Basics)</h3>
+    <ul>
+        <li>Introduction to Swing library</li>
+        <li>Creating basic frames, buttons, labels, and text fields</li>
+        <li>Event-driven programming</li>
+        <li>Simple GUI applications</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with examples</li>
+        <li>Live coding demonstrations</li>
+        <li>Lab exercises and practical assignments</li>
+        <li>Mini-projects and case studies</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written examinations</li>
+        <li>Programming assignments</li>
+        <li>Lab practical tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+ 
+ `
+},
+9:{title:"Course 9:",
+  content: ` 
+  
+    <h1>Course 9: Scripting Languages</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        Scripting Languages introduces students to programming languages that are interpreted rather than
+        compiled. These languages are used for automating tasks, web development, and rapid application
+        development. This course focuses on the features, syntax, and applications of popular scripting
+        languages like Python, JavaScript, and Bash.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the difference between scripting and compiled languages</li>
+        <li>Write scripts to automate tasks and solve problems</li>
+        <li>Use scripting languages for web development and data processing</li>
+        <li>Work with variables, control statements, and functions in scripting languages</li>
+        <li>Understand basic object-oriented and functional programming in scripting languages</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to Scripting Languages</h3>
+    <ul>
+        <li>Definition and purpose of scripting languages</li>
+        <li>Interpreted vs. compiled languages</li>
+        <li>Advantages of scripting languages (rapid development, ease of use)</li>
+        <li>Popular scripting languages: Python, JavaScript, Bash</li>
+    </ul>
+
+    <h3>2. Basics of Python</h3>
+    <ul>
+        <li>Variables, data types, and operators</li>
+        <li>Control statements: if, for, while</li>
+        <li>Functions and modules</li>
+        <li>Lists, tuples, dictionaries, and sets</li>
+        <li>Simple input/output operations</li>
+    </ul>
+
+    <h3>3. Basics of JavaScript</h3>
+    <ul>
+        <li>Variables (var, let, const)</li>
+        <li>Operators and expressions</li>
+        <li>Control statements (if, switch, loops)</li>
+        <li>Functions and events</li>
+        <li>Introduction to DOM manipulation (basic idea)</li>
+    </ul>
+
+    <h3>4. Basics of Bash Scripting (Optional/Basic)</h3>
+    <ul>
+        <li>Writing shell scripts</li>
+        <li>Variables and expressions in Bash</li>
+        <li>Control structures: if, for, while</li>
+        <li>File and directory manipulation</li>
+        <li>Automating simple tasks</li>
+    </ul>
+
+    <h3>5. Functions and Modules</h3>
+    <ul>
+        <li>Creating reusable functions</li>
+        <li>Importing and using modules/libraries</li>
+        <li>Scope of variables (local vs global)</li>
+        <li>Benefits of modular programming</li>
+    </ul>
+
+    <h3>6. File Handling</h3>
+    <ul>
+        <li>Reading and writing files</li>
+        <li>Working with text and CSV files</li>
+        <li>Exception handling in file operations</li>
+        <li>Automating file-based tasks</li>
+    </ul>
+
+    <h3>7. Object-Oriented Programming (Basic)</h3>
+    <ul>
+        <li>Classes and objects in Python or JavaScript</li>
+        <li>Attributes and methods</li>
+        <li>Inheritance and polymorphism (basic idea)</li>
+        <li>Advantages of OOP in scripting</li>
+    </ul>
+
+    <h3>8. Regular Expressions (Basic)</h3>
+    <ul>
+        <li>Pattern matching and searching</li>
+        <li>Using regex in Python or JavaScript</li>
+        <li>Simple text processing tasks</li>
+    </ul>
+
+    <h3>9. Web Scripting (Basic)</h3>
+    <ul>
+        <li>Introduction to client-side scripting with JavaScript</li>
+        <li>Dynamic content manipulation</li>
+        <li>Introduction to server-side scripting (Python with Flask/Django)</li>
+    </ul>
+
+    <h3>10. Automation and Practical Applications</h3>
+    <ul>
+        <li>Automating repetitive tasks</li>
+        <li>Data processing and analysis scripts</li>
+        <li>Simple web scraping</li>
+        <li>Scripting in system administration</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with examples</li>
+        <li>Live coding and demonstrations</li>
+        <li>Hands-on exercises and lab sessions</li>
+        <li>Assignments and mini-projects</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written tests and quizzes</li>
+        <li>Programming assignments</li>
+        <li>Lab practical tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+  
+  `
+
+},
+10:{title:"Course 10: ",
+ content: `
+ 
+    <h1>Course 10: JavaScript</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        JavaScript is a high-level, interpreted programming language primarily used for web development.
+        It allows developers to make web pages interactive, dynamic, and responsive. This course focuses
+        on JavaScript fundamentals, DOM manipulation, events, functions, objects, and basic web application
+        development.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the syntax and features of JavaScript</li>
+        <li>Use JavaScript to create dynamic and interactive web content</li>
+        <li>Manipulate the Document Object Model (DOM)</li>
+        <li>Apply functions, objects, arrays, and event handling</li>
+        <li>Develop simple client-side web applications</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to JavaScript</h3>
+    <ul>
+        <li>History and features of JavaScript</li>
+        <li>Client-side vs. server-side scripting</li>
+        <li>Role of JavaScript in web development</li>
+        <li>Writing and running JavaScript code in browsers</li>
+    </ul>
+
+    <h3>2. Basics of JavaScript</h3>
+    <ul>
+        <li>Variables (var, let, const)</li>
+        <li>Data types (string, number, boolean, object, array)</li>
+        <li>Operators and expressions</li>
+        <li>Input/output using alert(), console.log(), prompt()</li>
+    </ul>
+
+    <h3>3. Control Structures</h3>
+    <ul>
+        <li>Decision making: if, else if, else, switch</li>
+        <li>Loops: for, while, do-while</li>
+        <li>Break and continue statements</li>
+        <li>Practical examples</li>
+    </ul>
+
+    <h3>4. Functions</h3>
+    <ul>
+        <li>Defining and calling functions</li>
+        <li>Function parameters and return values</li>
+        <li>Function expressions and arrow functions</li>
+        <li>Scope of variables: global vs local</li>
+    </ul>
+
+    <h3>5. Arrays and Objects</h3>
+    <ul>
+        <li>Creating and using arrays</li>
+        <li>Array methods (push(), pop(), shift(), unshift(), forEach())</li>
+        <li>Creating and using objects</li>
+        <li>Object properties and methods</li>
+    </ul>
+
+    <h3>6. DOM (Document Object Model) Manipulation</h3>
+    <ul>
+        <li>Understanding DOM structure</li>
+        <li>Accessing HTML elements using getElementById, querySelector, etc.</li>
+        <li>Changing content, styles, and attributes dynamically</li>
+        <li>Adding and removing elements</li>
+    </ul>
+
+    <h3>7. Event Handling</h3>
+    <ul>
+        <li>Introduction to events</li>
+        <li>Common events: onclick, onmouseover, onchange</li>
+        <li>Adding event listeners</li>
+        <li>Event objects and event-driven programming</li>
+    </ul>
+
+    <h3>8. JavaScript and Forms</h3>
+    <ul>
+        <li>Form validation using JavaScript</li>
+        <li>Reading and writing form values</li>
+        <li>Basic input validation techniques</li>
+    </ul>
+
+    <h3>9. Error Handling</h3>
+    <ul>
+        <li>try, catch, finally statements</li>
+        <li>Handling runtime errors</li>
+        <li>Debugging with console.log()</li>
+    </ul>
+
+    <h3>10. Introduction to Modern JavaScript Features (ES6 Basics)</h3>
+    <ul>
+        <li>Template literals</li>
+        <li>let and const</li>
+        <li>Arrow functions</li>
+        <li>for...of and for...in loops</li>
+        <li>Default parameters</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with real-time coding</li>
+        <li>Hands-on exercises in browsers</li>
+        <li>Mini-projects and practical assignments</li>
+        <li>Case studies on dynamic web pages</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and tests</li>
+        <li>JavaScript programming assignments</li>
+        <li>Lab practical evaluations</li>
+        <li>Mini-project presentations</li>
+    </ul>
+ 
+ `
+
+},
+11:{title:"Course 11:",
+ content: ` 
+  <h1>Course 11: Web Technologies</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Web Technologies</strong> is a course that introduces students to the tools, languages, and frameworks
+        used to <strong>develop websites and web applications</strong>. The course covers
+        <strong>front-end development (HTML, CSS, JavaScript)</strong>, <strong>back-end basics</strong>, and an overview
+        of modern web technologies. Students learn to design interactive, responsive, and functional web pages.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand how the web works and how websites are structured</li>
+        <li>Create web pages using HTML, CSS, and JavaScript</li>
+        <li>Apply responsive design principles</li>
+        <li>Understand basic server-side concepts</li>
+        <li>Use web technologies to develop simple web applications</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to Web Technologies</h3>
+    <ul>
+        <li>Overview of web development: front-end, back-end, and full-stack</li>
+        <li>Internet, web servers, and browsers</li>
+        <li>HTTP/HTTPS and request-response model</li>
+        <li>Client-side vs. server-side scripting</li>
+    </ul>
+
+    <h3>2. HTML (HyperText Markup Language)</h3>
+    <ul>
+        <li>Structure of an HTML document</li>
+        <li>HTML tags, attributes, and elements</li>
+        <li>Headings, paragraphs, lists, links, images</li>
+        <li>Tables, forms, and semantic HTML</li>
+    </ul>
+
+    <h3>3. CSS (Cascading Style Sheets)</h3>
+    <ul>
+        <li>Introduction to CSS</li>
+        <li>Inline, internal, and external CSS</li>
+        <li>Selectors, properties, and values</li>
+        <li>Box model, margins, padding, borders</li>
+        <li>Fonts, colors, backgrounds, and layout design</li>
+        <li>Responsive design using media queries</li>
+    </ul>
+
+    <h3>4. JavaScript Basics for Web</h3>
+    <ul>
+        <li>Embedding JavaScript in web pages</li>
+        <li>Variables, operators, and expressions</li>
+        <li>DOM manipulation (changing content and style dynamically)</li>
+        <li>Event handling (clicks, mouse events, input validation)</li>
+    </ul>
+
+    <h3>5. Advanced Front-End Concepts</h3>
+    <ul>
+        <li>CSS Flexbox and Grid for layouts</li>
+        <li>Responsive web design principles</li>
+        <li>Basic animations using CSS and JavaScript</li>
+        <li>Introduction to front-end frameworks (overview only, e.g., Bootstrap)</li>
+    </ul>
+
+    <h3>6. Forms and Validation</h3>
+    <ul>
+        <li>Creating forms in HTML</li>
+        <li>Validating form inputs using JavaScript</li>
+        <li>Preventing submission of incorrect data</li>
+        <li>User-friendly error messages</li>
+    </ul>
+
+    <h3>7. Introduction to Back-End Basics</h3>
+    <ul>
+        <li>Client-server architecture</li>
+        <li>Server-side scripting concepts</li>
+        <li>Databases and data storage overview</li>
+        <li>Overview of server technologies (PHP, Node.js, Python – conceptual)</li>
+    </ul>
+
+    <h3>8. Web Application Workflow</h3>
+    <ul>
+        <li>Steps to create a simple web application</li>
+        <li>Combining HTML, CSS, and JavaScript</li>
+        <li>Using external libraries (like jQuery or Bootstrap basics)</li>
+        <li>Debugging and testing web pages</li>
+    </ul>
+
+    <h3>9. Modern Web Concepts (Overview)</h3>
+    <ul>
+        <li>Single-page applications (SPA)</li>
+        <li>RESTful APIs and AJAX (conceptual introduction)</li>
+        <li>Web hosting and deployment basics</li>
+        <li>Introduction to version control with Git (conceptual)</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Creating personal web pages</li>
+        <li>Interactive forms and calculators</li>
+        <li>Simple web-based games or apps</li>
+        <li>Portfolio or small business websites</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with live coding demonstrations</li>
+        <li>Hands-on exercises for HTML, CSS, and JavaScript</li>
+        <li>Mini-projects and web page design assignments</li>
+        <li>Group discussions and presentations</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and tests</li>
+        <li>Lab exercises and practical assignments</li>
+        <li>Mini-project evaluation</li>
+        <li>Participation in class exercises</li>
+    </ul>
+ 
+ 
+ `
+},
+12:{title:"Course 12: ",
+content: `
+
+    <h1>Course 12: PHP Programming</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>PHP Programming</strong> introduces students to <strong>PHP (Hypertext Preprocessor)</strong>, a widely used
+        <strong>server-side scripting language</strong> for web development. PHP is used to create
+        <strong>dynamic web pages, handle forms, manage databases, and build web applications</strong>. This course focuses
+        on PHP syntax, server-side programming concepts, and interaction with databases.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the fundamentals of PHP scripting</li>
+        <li>Write dynamic web pages using PHP</li>
+        <li>Handle form data and validate user inputs</li>
+        <li>Interact with databases (like MySQL) using PHP</li>
+        <li>Develop simple server-side web applications</li>
+    </ul>
+
+    <h2>Course Contents</h2>
+
+    <h3>1. Introduction to PHP</h3>
+    <ul>
+        <li>History and features of PHP</li>
+        <li>Server-side vs. client-side scripting</li>
+        <li>Setting up a PHP environment (XAMPP/WAMP/LAMP)</li>
+        <li>Writing and running your first PHP script</li>
+    </ul>
+
+    <h3>2. Basics of PHP Programming</h3>
+    <ul>
+        <li>PHP syntax and structure</li>
+        <li>Variables, constants, and data types</li>
+        <li>Operators and expressions</li>
+        <li>Comments and best coding practices</li>
+    </ul>
+
+    <h3>3. Control Structures</h3>
+    <ul>
+        <li>Decision making: <code>if</code>, <code>else</code>, <code>elseif</code>, <code>switch</code></li>
+        <li>Loops: <code>for</code>, <code>while</code>, <code>do-while</code>, <code>foreach</code></li>
+        <li>Break and continue statements</li>
+        <li>Practical examples</li>
+    </ul>
+
+    <h3>4. Functions in PHP</h3>
+    <ul>
+        <li>Defining and calling functions</li>
+        <li>Function parameters and return values</li>
+        <li>Built-in PHP functions</li>
+        <li>User-defined functions</li>
+        <li>Scope of variables (global vs local)</li>
+    </ul>
+
+    <h3>5. Arrays</h3>
+    <ul>
+        <li>Indexed arrays</li>
+        <li>Associative arrays</li>
+        <li>Multidimensional arrays</li>
+        <li>Array functions (<code>array_push</code>, <code>array_merge</code>, etc.)</li>
+    </ul>
+
+    <h3>6. Strings and String Functions</h3>
+    <ul>
+        <li>String creation and concatenation</li>
+        <li>String manipulation functions (<code>strlen</code>, <code>str_replace</code>, <code>substr</code>)</li>
+        <li>Formatting and outputting strings</li>
+    </ul>
+
+    <h3>7. Handling Forms and User Input</h3>
+    <ul>
+        <li>Retrieving data using <code>$_GET</code> and <code>$_POST</code></li>
+        <li>Form validation techniques</li>
+        <li>Sanitizing user input</li>
+        <li>Preventing common security issues</li>
+    </ul>
+
+    <h3>8. File Handling</h3>
+    <ul>
+        <li>Reading and writing files</li>
+        <li>File functions (<code>fopen</code>, <code>fwrite</code>, <code>fread</code>, <code>fclose</code>)</li>
+        <li>Uploading files to the server</li>
+    </ul>
+
+    <h3>9. PHP and Databases (MySQL)</h3>
+    <ul>
+        <li>Introduction to relational databases</li>
+        <li>Connecting to MySQL using PHP (<code>mysqli</code> or <code>PDO</code>)</li>
+        <li>Executing queries: SELECT, INSERT, UPDATE, DELETE</li>
+        <li>Displaying database data on web pages</li>
+        <li>Basic CRUD (Create, Read, Update, Delete) operations</li>
+    </ul>
+
+    <h3>10. Session and Cookie Management</h3>
+    <ul>
+        <li>Understanding sessions and cookies</li>
+        <li>Creating, accessing, and deleting sessions and cookies</li>
+        <li>Maintaining user login and preferences</li>
+    </ul>
+
+    <h3>11. Error Handling and Debugging</h3>
+    <ul>
+        <li>Common PHP errors and warnings</li>
+        <li>Using <code>try</code>, <code>catch</code> for exception handling</li>
+        <li>Debugging techniques</li>
+    </ul>
+
+    <h3>12. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Dynamic websites with user login</li>
+        <li>Online forms and data storage</li>
+        <li>Simple CMS (Content Management System)</li>
+        <li>Small e-commerce or portfolio websites</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with live coding</li>
+        <li>Hands-on exercises and lab sessions</li>
+        <li>Assignments and mini-projects</li>
+        <li>Group discussions and problem-solving</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and tests</li>
+        <li>Practical PHP programming assignments</li>
+        <li>Lab practical evaluations</li>
+        <li>Mini-project presentations</li>
+    </ul>
+`
+
+},
+13:{title:"Course 13:",
+content:`
+
+    <h1>Course 13: Database Management Systems (DBMS)</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Database Management Systems (DBMS)</strong> is a course that introduces students to 
+        <strong>databases, data storage, and management techniques</strong>. The course covers concepts of relational databases, 
+        SQL (Structured Query Language), database design, and normalization. Students learn how to 
+        <strong>store, retrieve, and manage data efficiently</strong> in real-world applications.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the basic concepts of databases and DBMS</li>
+        <li>Design and implement relational databases</li>
+        <li>Write SQL queries to store, retrieve, and manipulate data</li>
+        <li>Apply normalization rules for efficient database design</li>
+        <li>Understand the role of databases in modern applications</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to Databases</h3>
+    <ul>
+        <li>What is a database and why it is needed</li>
+        <li>Types of databases: hierarchical, network, relational, NoSQL</li>
+        <li>Components of DBMS: DBMS software, database, users</li>
+        <li>Advantages of DBMS over file-based systems</li>
+    </ul>
+
+    <h3>2. Database Models</h3>
+    <ul>
+        <li>Relational model (tables, rows, columns)</li>
+        <li>Entity-Relationship (ER) model</li>
+        <li>Primary keys, foreign keys, and relationships</li>
+        <li>Other models overview: object-oriented, NoSQL</li>
+    </ul>
+
+    <h3>3. Database Design</h3>
+    <ul>
+        <li>Concept of entities and attributes</li>
+        <li>Relationships and cardinality</li>
+        <li>Creating ER diagrams</li>
+        <li>Converting ER diagrams to relational tables</li>
+    </ul>
+
+    <h3>4. SQL (Structured Query Language) Basics</h3>
+    <ul>
+        <li>Introduction to SQL</li>
+        <li>Data types in SQL</li>
+        <li>Basic SQL commands: <code>CREATE</code>, <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code></li>
+        <li>Filtering data using <code>WHERE</code> and <code>ORDER BY</code></li>
+    </ul>
+
+    <h3>5. Advanced SQL</h3>
+    <ul>
+        <li>Aggregate functions: <code>SUM</code>, <code>AVG</code>, <code>COUNT</code>, <code>MIN</code>, <code>MAX</code></li>
+        <li>Grouping data using <code>GROUP BY</code></li>
+        <li>Joining tables: <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code></li>
+        <li>Subqueries and nested queries</li>
+        <li>Using <code>DISTINCT</code>, <code>LIMIT</code>, and <code>HAVING</code></li>
+    </ul>
+
+    <h3>6. Normalization</h3>
+    <ul>
+        <li>Need for normalization</li>
+        <li>First, Second, and Third Normal Forms (1NF, 2NF, 3NF)</li>
+        <li>Eliminating data redundancy</li>
+        <li>Maintaining data integrity</li>
+    </ul>
+
+    <h3>7. Indexing and Views</h3>
+    <ul>
+        <li>Indexing for faster data retrieval</li>
+        <li>Creating and using views</li>
+        <li>Advantages and limitations of views</li>
+    </ul>
+
+    <h3>8. Transactions and Concurrency</h3>
+    <ul>
+        <li>Concept of transactions</li>
+        <li>ACID properties: Atomicity, Consistency, Isolation, Durability</li>
+        <li>Concurrency control (basic idea)</li>
+        <li>Commit and rollback operations</li>
+    </ul>
+
+    <h3>9. Database Security and Backup</h3>
+    <ul>
+        <li>User authentication and access control</li>
+        <li>Backup and recovery techniques</li>
+        <li>Protecting data integrity and privacy</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Creating and managing a small database</li>
+        <li>Student or employee management system</li>
+        <li>Inventory management system</li>
+        <li>Simple e-commerce database</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Lectures with diagrams and examples</li>
+        <li>Hands-on SQL and DBMS lab sessions</li>
+        <li>Assignments and mini-projects</li>
+        <li>Case studies of real-world database systems</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>SQL and database programming assignments</li>
+        <li>Lab practical evaluation</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+`
+},
+14:{title:"Course 14: ",
+content:`
+
+
+    <h1>Course 14: SQL (Structured Query Language)</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>SQL</strong> is the standard language used to <strong>interact with relational databases</strong>. 
+        This course teaches students how to <strong>create, manage, and query databases</strong> using SQL. 
+        Students learn how to store, retrieve, update, and delete data, as well as how to handle database 
+        security and integrity.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand SQL syntax and commands</li>
+        <li>Create and manage relational databases</li>
+        <li>Retrieve and manipulate data efficiently</li>
+        <li>Apply advanced SQL features such as joins, subqueries, and views</li>
+        <li>Ensure data integrity and perform basic database administration tasks</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to SQL</h3>
+    <ul>
+        <li>What is SQL and its importance</li>
+        <li>Relational databases and tables</li>
+        <li>Basic structure of SQL commands</li>
+        <li>SQL data types</li>
+    </ul>
+
+    <h3>2. Data Definition Language (DDL)</h3>
+    <ul>
+        <li><code>CREATE DATABASE</code> and <code>CREATE TABLE</code></li>
+        <li><code>ALTER TABLE</code> to modify structure</li>
+        <li><code>DROP TABLE</code> and <code>DROP DATABASE</code></li>
+        <li>Constraints: <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>UNIQUE</code>, <code>NOT NULL</code>, <code>CHECK</code></li>
+    </ul>
+
+    <h3>3. Data Manipulation Language (DML)</h3>
+    <ul>
+        <li><code>INSERT INTO</code> to add data</li>
+        <li><code>UPDATE</code> to modify existing data</li>
+        <li><code>DELETE</code> to remove data</li>
+        <li>Practical examples of DML operations</li>
+    </ul>
+
+    <h3>4. Data Retrieval: SELECT Statement</h3>
+    <ul>
+        <li>Basic <code>SELECT</code> queries</li>
+        <li>Filtering data using <code>WHERE</code></li>
+        <li>Sorting data using <code>ORDER BY</code></li>
+        <li>Selecting distinct values with <code>DISTINCT</code></li>
+    </ul>
+
+    <h3>5. Aggregate Functions</h3>
+    <ul>
+        <li>Functions: <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code></li>
+        <li>Grouping data with <code>GROUP BY</code></li>
+        <li>Filtering grouped data with <code>HAVING</code></li>
+    </ul>
+
+    <h3>6. Joining Tables</h3>
+    <ul>
+        <li>Need for joins</li>
+        <li>Types of joins: <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>, <code>FULL OUTER JOIN</code></li>
+        <li>Using aliases for tables and columns</li>
+        <li>Combining multiple tables in queries</li>
+    </ul>
+
+    <h3>7. Subqueries and Nested Queries</h3>
+    <ul>
+        <li>Using subqueries in <code>SELECT</code>, <code>WHERE</code>, and <code>FROM</code></li>
+        <li>Correlated and non-correlated subqueries</li>
+        <li>Practical examples of nested queries</li>
+    </ul>
+
+    <h3>8. Views and Indexes</h3>
+    <ul>
+        <li>Creating and using views</li>
+        <li>Advantages of using views</li>
+        <li>Introduction to indexing</li>
+        <li>Improving query performance with indexes</li>
+    </ul>
+
+    <h3>9. Transactions and Data Integrity</h3>
+    <ul>
+        <li>Understanding transactions</li>
+        <li><code>COMMIT</code> and <code>ROLLBACK</code></li>
+        <li>ACID properties: Atomicity, Consistency, Isolation, Durability</li>
+        <li>Ensuring reliable database operations</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Student or employee database management</li>
+        <li>Library management system</li>
+        <li>Online store inventory database</li>
+        <li>Generating reports from database data</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Lectures with live SQL demonstrations</li>
+        <li>Hands-on lab exercises using MySQL, PostgreSQL, or similar DBMS</li>
+        <li>Assignments and mini-projects</li>
+        <li>Case studies on real-world database queries</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and tests on SQL concepts</li>
+        <li>SQL programming assignments</li>
+        <li>Lab practical tests</li>
+        <li>Mini-project evaluation</li>
+    </ul>
+`
+},
+15:{title:"Course 15:",
+ content:`
+ 
+
+    <h1>Course 15: Advanced Databases</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Advanced Databases</strong> builds on basic database concepts to cover 
+        <strong>complex data management, database optimization, and modern database technologies</strong>. 
+        This course explores <strong>distributed databases, NoSQL databases, data warehousing, big data, 
+        and database performance tuning</strong>. Students gain skills to manage large-scale, 
+        high-performance, and modern database systems.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand advanced database concepts and architectures</li>
+        <li>Work with distributed and cloud-based databases</li>
+        <li>Apply performance optimization techniques for databases</li>
+        <li>Design and manage NoSQL and big data systems</li>
+        <li>Implement modern database solutions for real-world applications</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to Advanced Databases</h3>
+    <ul>
+        <li>Recap of relational databases and SQL</li>
+        <li>Limitations of traditional databases</li>
+        <li>Overview of advanced database technologies</li>
+        <li>Use cases for advanced databases</li>
+    </ul>
+
+    <h3>2. Distributed Databases</h3>
+    <ul>
+        <li>Concept of distributed databases</li>
+        <li>Data replication and partitioning</li>
+        <li>Advantages and challenges of distributed databases</li>
+        <li>Examples: Google Spanner, Amazon Aurora</li>
+    </ul>
+
+    <h3>3. Database Performance Optimization</h3>
+    <ul>
+        <li>Query optimization techniques</li>
+        <li>Indexing strategies and types of indexes</li>
+        <li>Caching mechanisms</li>
+        <li>Database normalization vs denormalization for performance</li>
+    </ul>
+
+    <h3>4. NoSQL Databases</h3>
+    <ul>
+        <li>Introduction to NoSQL (Not Only SQL)</li>
+        <li>Types of NoSQL databases:
+            <ul>
+                <li>Document-based (e.g., MongoDB)</li>
+                <li>Key-Value (e.g., Redis)</li>
+                <li>Column-based (e.g., Cassandra)</li>
+                <li>Graph-based (e.g., Neo4j)</li>
+            </ul>
+        </li>
+        <li>Advantages and use cases</li>
+    </ul>
+
+    <h3>5. Data Warehousing and OLAP</h3>
+    <ul>
+        <li>Concept of data warehouses</li>
+        <li>ETL process (Extract, Transform, Load)</li>
+        <li>OLAP (Online Analytical Processing) vs OLTP (Online Transaction Processing)</li>
+        <li>Star and snowflake schema design</li>
+    </ul>
+
+    <h3>6. Big Data and Cloud Databases</h3>
+    <ul>
+        <li>Introduction to big data technologies (Hadoop, Spark)</li>
+        <li>Distributed storage and processing</li>
+        <li>Cloud database services (AWS, Azure, Google Cloud)</li>
+        <li>Scalability, availability, and reliability</li>
+    </ul>
+
+    <h3>7. Transactions and Concurrency in Advanced Databases</h3>
+    <ul>
+        <li>Distributed transactions</li>
+        <li>Concurrency control techniques</li>
+        <li>Two-phase commit protocol</li>
+        <li>Maintaining consistency in large systems</li>
+    </ul>
+
+    <h3>8. Security in Advanced Databases</h3>
+    <ul>
+        <li>Authentication and authorization</li>
+        <li>Encryption and data masking</li>
+        <li>Auditing and compliance</li>
+        <li>Protecting sensitive data</li>
+    </ul>
+
+    <h3>9. Database Design for Large Applications</h3>
+    <ul>
+        <li>Schema design for complex systems</li>
+        <li>Partitioning and sharding techniques</li>
+        <li>Handling large-scale datasets efficiently</li>
+        <li>Optimizing queries for performance</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Distributed database application (e.g., multi-location inventory system)</li>
+        <li>NoSQL-based application (e.g., document store for content management)</li>
+        <li>Data warehouse for sales or school records</li>
+        <li>Analytics dashboard using database queries</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Conceptual lectures with real-world examples</li>
+        <li>Hands-on exercises with relational, NoSQL, and cloud databases</li>
+        <li>Case studies on large-scale database systems</li>
+        <li>Mini-projects demonstrating advanced database concepts</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>Programming assignments and lab exercises</li>
+        <li>Practical evaluation of projects</li>
+        <li>Case-study analysis</li>
+    </ul>
+
+ `
+},
+16:{title:"Course 16:",
+ content: ` 
+ 
+
+    <h1>Course 16: Software Engineering</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Software Engineering</strong> is the study of 
+        <strong>systematic methods for designing, developing, testing, and maintaining software applications</strong>. 
+        The course introduces students to software development life cycles (SDLC), software design principles, 
+        project management, and quality assurance. It emphasizes 
+        <strong>practical approaches to building reliable, maintainable, and efficient software systems</strong>.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the principles of software engineering and software development life cycles</li>
+        <li>Apply structured approaches to software design and development</li>
+        <li>Use modeling tools and techniques for software planning</li>
+        <li>Manage software projects, including time, resources, and quality</li>
+        <li>Perform software testing, maintenance, and documentation</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to Software Engineering</h3>
+    <ul>
+        <li>Definition and scope of software engineering</li>
+        <li>Types of software: system software, application software, embedded software</li>
+        <li>Software engineering challenges and best practices</li>
+        <li>Importance of software quality</li>
+    </ul>
+
+    <h3>2. Software Development Life Cycle (SDLC)</h3>
+    <ul>
+        <li>Phases of SDLC:
+            <ul>
+                <li>Requirement analysis</li>
+                <li>System design</li>
+                <li>Implementation (coding)</li>
+                <li>Testing</li>
+                <li>Deployment</li>
+                <li>Maintenance</li>
+            </ul>
+        </li>
+        <li>Comparison of SDLC models: Waterfall, Agile, Iterative, Spiral</li>
+    </ul>
+
+    <h3>3. Requirements Engineering</h3>
+    <ul>
+        <li>Gathering and analyzing requirements</li>
+        <li>Functional vs non-functional requirements</li>
+        <li>Use cases and user stories</li>
+        <li>Requirement specification document</li>
+    </ul>
+
+    <h3>4. Software Design</h3>
+    <ul>
+        <li>System architecture and design principles</li>
+        <li>Structured design: modularization, flowcharts, and pseudocode</li>
+        <li>Object-oriented design: classes, objects, UML diagrams</li>
+        <li>Design patterns overview</li>
+    </ul>
+
+    <h3>5. Software Development Methodologies</h3>
+    <ul>
+        <li>Waterfall model</li>
+        <li>Agile methodology (Scrum, Kanban)</li>
+        <li>Rapid Application Development (RAD)</li>
+        <li>Extreme Programming (XP)</li>
+    </ul>
+
+    <h3>6. Software Testing and Quality Assurance</h3>
+    <ul>
+        <li>Types of testing: unit, integration, system, acceptance</li>
+        <li>Black-box and white-box testing</li>
+        <li>Test plans, test cases, and bug reporting</li>
+        <li>Ensuring software reliability and maintainability</li>
+    </ul>
+
+    <h3>7. Software Project Management</h3>
+    <ul>
+        <li>Planning and scheduling (Gantt charts, PERT diagrams)</li>
+        <li>Resource management and task allocation</li>
+        <li>Risk management in software projects</li>
+        <li>Cost estimation and project documentation</li>
+    </ul>
+
+    <h3>8. Software Maintenance and Evolution</h3>
+    <ul>
+        <li>Types of maintenance: corrective, adaptive, perfective, preventive</li>
+        <li>Version control and configuration management</li>
+        <li>Refactoring and improving existing software</li>
+        <li>Importance of documentation</li>
+    </ul>
+
+    <h3>9. Software Tools and CASE Tools</h3>
+    <ul>
+        <li>Integrated Development Environments (IDEs)</li>
+        <li>Version control systems (e.g., Git)</li>
+        <li>Modeling and diagramming tools (UML tools, flowchart software)</li>
+        <li>Testing and debugging tools</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Developing a small software project following SDLC</li>
+        <li>Creating UML diagrams and design documentation</li>
+        <li>Testing a small application for bugs and improvements</li>
+        <li>Team-based software development simulation</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with real-world examples</li>
+        <li>Case studies of software projects</li>
+        <li>Hands-on exercises in design, coding, and testing</li>
+        <li>Group mini-projects to simulate real software development</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>Practical assignments and project work</li>
+        <li>Lab evaluation for testing and debugging tasks</li>
+        <li>Mini-project presentation and documentation review</li>
+    </ul>
+ `
+},
+17:{title:"Course 17: ",
+content: ` 
+
+
+    <h1>Course 17: Software Testing & Quality Assurance (QA)</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Software Testing & Quality Assurance</strong> introduces students to the methods and techniques used to 
+        <strong>ensure software meets quality standards and functions correctly</strong>. This course covers testing types, 
+        testing life cycles, QA processes, bug tracking, and industry best practices. Students learn how to 
+        <strong>identify, report, and prevent software defects</strong> effectively.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the principles and importance of software testing and QA</li>
+        <li>Apply different types of testing techniques (manual and automated)</li>
+        <li>Plan, design, and execute test cases effectively</li>
+        <li>Track, report, and manage software defects</li>
+        <li>Ensure software quality throughout the development life cycle</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to Software Testing</h3>
+    <ul>
+        <li>Definition and objectives of software testing</li>
+        <li>Differences between verification and validation</li>
+        <li>Role of testing in software development</li>
+        <li>Cost of software defects and benefits of early testing</li>
+    </ul>
+
+    <h3>2. Software Quality Assurance (SQA)</h3>
+    <ul>
+        <li>Definition and scope of SQA</li>
+        <li>Quality standards (ISO, CMMI)</li>
+        <li>QA vs. Testing</li>
+        <li>Process improvement and best practices</li>
+    </ul>
+
+    <h3>3. Software Testing Life Cycle (STLC)</h3>
+    <ul>
+        <li>Phases of STLC:
+            <ul>
+                <li>Requirement analysis</li>
+                <li>Test planning</li>
+                <li>Test case design</li>
+                <li>Test environment setup</li>
+                <li>Test execution</li>
+                <li>Defect reporting</li>
+                <li>Test closure</li>
+            </ul>
+        </li>
+        <li>Importance of each phase</li>
+    </ul>
+
+    <h3>4. Types of Testing</h3>
+    <ul>
+        <li><strong>Manual Testing</strong>: Exploratory, functional, non-functional</li>
+        <li><strong>Automated Testing</strong>: Tools and frameworks (Selenium, JUnit, etc.)</li>
+        <li><strong>Functional Testing</strong>: Unit, integration, system, acceptance</li>
+        <li><strong>Non-Functional Testing</strong>: Performance, load, stress, usability, security</li>
+        <li>Regression testing and smoke testing</li>
+    </ul>
+
+    <h3>5. Test Planning and Design</h3>
+    <ul>
+        <li>Creating a test plan</li>
+        <li>Writing test cases and test scripts</li>
+        <li>Test data preparation</li>
+        <li>Test coverage and traceability matrix</li>
+    </ul>
+
+    <h3>6. Bug Tracking and Reporting</h3>
+    <ul>
+        <li>Identifying and logging defects</li>
+        <li>Bug life cycle</li>
+        <li>Severity vs. priority of defects</li>
+        <li>Using bug tracking tools (e.g., Jira, Bugzilla)</li>
+    </ul>
+
+    <h3>7. Automation Testing Basics</h3>
+    <ul>
+        <li>Introduction to automation and benefits</li>
+        <li>Selecting test cases for automation</li>
+        <li>Popular testing tools overview</li>
+        <li>Writing simple automated scripts</li>
+    </ul>
+
+    <h3>8. Quality Metrics and Measurement</h3>
+    <ul>
+        <li>Metrics for testing effectiveness</li>
+        <li>Defect density, test case execution rate</li>
+        <li>Measuring software reliability and maintainability</li>
+    </ul>
+
+    <h3>9. Best Practices in QA</h3>
+    <ul>
+        <li>Early involvement in software development</li>
+        <li>Continuous testing and integration</li>
+        <li>Peer reviews and code inspections</li>
+        <li>Documentation and knowledge sharing</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Creating a test plan for a small software application</li>
+        <li>Designing and executing test cases</li>
+        <li>Reporting and tracking defects</li>
+        <li>Performing basic automated testing using free tools</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with real-world examples</li>
+        <li>Hands-on lab exercises for manual and automated testing</li>
+        <li>Assignments and mini-projects</li>
+        <li>Case studies on testing industry practices</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>Practical assignments on testing and defect reporting</li>
+        <li>Lab practical evaluation</li>
+        <li>Mini-project presentations</li>
+    </ul>
+`
+},
+18:{title:"Course 18: ",
+content:`
+
+    <h1>Course 18: Multimedia Systems</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Multimedia Systems</strong> introduces students to the concepts, tools, and technologies used to 
+        <strong>create, process, and manage multimedia content</strong>. Multimedia combines 
+        <strong>text, images, audio, video, and animation</strong> to create interactive applications such as educational software, games, presentations, and web content. 
+        This course covers multimedia formats, tools, editing techniques, and system design.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand the components and principles of multimedia systems</li>
+        <li>Create, edit, and integrate text, images, audio, video, and animations</li>
+        <li>Work with multimedia software and authoring tools</li>
+        <li>Understand multimedia system design and applications</li>
+        <li>Apply multimedia concepts in projects and real-world applications</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Introduction to Multimedia</h3>
+    <ul>
+        <li>Definition and types of multimedia: text, graphics, audio, video, animation</li>
+        <li>Characteristics of multimedia systems</li>
+        <li>Multimedia applications in education, entertainment, business, and web</li>
+        <li>Multimedia hardware and software components</li>
+    </ul>
+
+    <h3>2. Multimedia Hardware and Software</h3>
+    <ul>
+        <li>Input and output devices for multimedia: scanners, microphones, cameras, speakers, displays</li>
+        <li>Multimedia authoring tools and software</li>
+        <li>Image, audio, and video editing software overview</li>
+        <li>System requirements for multimedia development</li>
+    </ul>
+
+    <h3>3. Text and Graphics in Multimedia</h3>
+    <ul>
+        <li>Text formats and fonts in multimedia</li>
+        <li>Bitmap vs vector graphics</li>
+        <li>Image editing techniques and tools</li>
+        <li>Graphics compression and formats (JPEG, PNG, SVG)</li>
+    </ul>
+
+    <h3>4. Audio and Video Multimedia</h3>
+    <ul>
+        <li>Audio formats and sampling (MP3, WAV)</li>
+        <li>Video formats and compression (MP4, AVI)</li>
+        <li>Editing and synchronizing audio and video</li>
+        <li>Streaming and playback technologies</li>
+    </ul>
+
+    <h3>5. Animation and Special Effects</h3>
+    <ul>
+        <li>Types of animation: 2D, 3D, stop-motion</li>
+        <li>Frame-by-frame animation and keyframe animation</li>
+        <li>Multimedia effects: transitions, overlays, motion graphics</li>
+        <li>Tools for creating animations</li>
+    </ul>
+
+    <h3>6. Multimedia File Formats and Compression</h3>
+    <ul>
+        <li>File formats for text, images, audio, video, and animation</li>
+        <li>Importance of compression in multimedia</li>
+        <li>Lossy vs lossless compression</li>
+        <li>Examples: JPEG, GIF, MP3, MPEG</li>
+    </ul>
+
+    <h3>7. Multimedia System Design</h3>
+    <ul>
+        <li>Designing multimedia applications</li>
+        <li>Storyboarding and content planning</li>
+        <li>User interface design for multimedia systems</li>
+        <li>Integration of text, graphics, audio, video, and animation</li>
+    </ul>
+
+    <h3>8. Multimedia Networking and Delivery</h3>
+    <ul>
+        <li>Multimedia on the internet</li>
+        <li>Streaming and downloading</li>
+        <li>Bandwidth considerations</li>
+        <li>Interactive multimedia applications</li>
+    </ul>
+
+    <h3>9. Multimedia Project Development</h3>
+    <ul>
+        <li>Planning and designing multimedia projects</li>
+        <li>Combining multimedia components</li>
+        <li>Testing and evaluating multimedia applications</li>
+        <li>User experience considerations</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Creating a multimedia presentation or slideshow</li>
+        <li>Designing an interactive educational module</li>
+        <li>Developing a short animated video</li>
+        <li>Combining audio, video, and graphics in a mini-project</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with multimedia examples</li>
+        <li>Hands-on sessions with multimedia tools</li>
+        <li>Assignments and mini-projects for practical experience</li>
+        <li>Group discussions and project presentations</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>Practical assignments on multimedia creation</li>
+        <li>Lab evaluations for software usage</li>
+        <li>Mini-project evaluation and presentation</li>
+    </ul>
+`
+},
+19:{title:"Course 19:",
+content:`
+
+    <h1>Course 19: Advanced Multimedia & Applications</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Advanced Multimedia & Applications</strong> builds upon basic multimedia concepts and focuses on 
+        <strong>creating sophisticated multimedia applications</strong>. This course covers 
+        <strong>interactive multimedia, 3D graphics, virtual reality, web-based multimedia, mobile multimedia, and advanced animation techniques</strong>. 
+        Students learn to design, develop, and deploy multimedia-rich applications for various platforms.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Understand advanced multimedia technologies and tools</li>
+        <li>Develop interactive multimedia applications for web, desktop, and mobile</li>
+        <li>Work with 3D graphics, virtual reality, and animation</li>
+        <li>Integrate multimedia components effectively in complex projects</li>
+        <li>Apply best practices in multimedia application design and deployment</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Overview of Advanced Multimedia</h3>
+    <ul>
+        <li>Differences between basic and advanced multimedia</li>
+        <li>Components of advanced multimedia applications</li>
+        <li>Multimedia for entertainment, education, business, and virtual environments</li>
+        <li>Emerging trends in multimedia technology</li>
+    </ul>
+
+    <h3>2. Interactive Multimedia</h3>
+    <ul>
+        <li>Principles of interactivity in multimedia applications</li>
+        <li>Designing interactive interfaces and user experiences</li>
+        <li>Event handling and multimedia control</li>
+        <li>Tools and software for interactive multimedia</li>
+    </ul>
+
+    <h3>3. Advanced Graphics and 3D Multimedia</h3>
+    <ul>
+        <li>3D graphics basics: modeling, rendering, and texturing</li>
+        <li>Introduction to 3D animation and keyframe techniques</li>
+        <li>Tools for creating 3D graphics (Blender, 3ds Max, Maya basics)</li>
+        <li>Incorporating 3D objects in applications</li>
+    </ul>
+
+    <h3>4. Virtual Reality (VR) and Augmented Reality (AR)</h3>
+    <ul>
+        <li>Concepts of VR and AR</li>
+        <li>VR/AR hardware and software</li>
+        <li>Designing immersive experiences</li>
+        <li>Applications of VR and AR in education, gaming, and simulations</li>
+    </ul>
+
+    <h3>5. Advanced Animation Techniques</h3>
+    <ul>
+        <li>Motion graphics and timeline-based animation</li>
+        <li>Special effects, transitions, and blending techniques</li>
+        <li>Layering and compositing multimedia elements</li>
+        <li>Software tools for advanced animation</li>
+    </ul>
+
+    <h3>6. Multimedia for Web and Mobile</h3>
+    <ul>
+        <li>Web-based multimedia using HTML5, CSS3, and JavaScript</li>
+        <li>Embedding audio, video, and animations in web applications</li>
+        <li>Mobile multimedia applications: design and limitations</li>
+        <li>Responsive multimedia content for multiple devices</li>
+    </ul>
+
+    <h3>7. Multimedia Databases and Storage</h3>
+    <ul>
+        <li>Managing multimedia content (images, audio, video)</li>
+        <li>Database techniques for storing and retrieving multimedia</li>
+        <li>Metadata and indexing for multimedia applications</li>
+        <li>Cloud storage and content delivery</li>
+    </ul>
+
+    <h3>8. Performance Optimization</h3>
+    <ul>
+        <li>Multimedia file compression and optimization</li>
+        <li>Streaming media efficiently over networks</li>
+        <li>Reducing load times and enhancing user experience</li>
+        <li>Cross-platform compatibility considerations</li>
+    </ul>
+
+    <h3>9. Multimedia Application Development Process</h3>
+    <ul>
+        <li>Planning and requirement analysis for multimedia apps</li>
+        <li>Storyboarding, wireframes, and prototypes</li>
+        <li>Integration of multimedia elements</li>
+        <li>Testing and evaluation of multimedia applications</li>
+    </ul>
+
+    <h3>10. Practical Applications and Mini-Projects</h3>
+    <ul>
+        <li>Developing an interactive educational module</li>
+        <li>Creating a web-based multimedia application with animations and audio/video</li>
+        <li>Designing a VR/AR demo or simulation</li>
+        <li>Producing an advanced multimedia presentation or short film</li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Interactive lectures with demonstrations of advanced multimedia tools</li>
+        <li>Hands-on lab sessions with 3D, VR, and web-based multimedia software</li>
+        <li>Assignments and mini-projects for practical learning</li>
+        <li>Group discussions and project presentations</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Written quizzes and examinations</li>
+        <li>Lab assignments on multimedia development</li>
+        <li>Practical evaluation of projects</li>
+        <li>Mini-project presentations and reports</li>
+    </ul>
+`
+},
+20:{title:"Course 20:",
+content:`
+
+    <h1>Course 20: Mini Project / Capstone</h1>
+
+    <h2>Course Description</h2>
+    <p>
+        <strong>Mini Project / Capstone</strong> is a practical course where students 
+        <strong>apply the knowledge and skills they have learned throughout their computer science or IT studies</strong> 
+        to design, develop, and present a complete software or multimedia project. This course emphasizes 
+        <strong>problem-solving, software/system development, teamwork, documentation, and presentation skills</strong>.
+    </p>
+
+    <h2>Course Objectives</h2>
+    <ul>
+        <li>Identify real-world problems that can be solved with computing solutions</li>
+        <li>Plan, design, implement, and test a complete project</li>
+        <li>Work effectively in teams to develop software or multimedia applications</li>
+        <li>Prepare proper documentation and present project outcomes</li>
+        <li>Demonstrate problem-solving, analytical thinking, and technical skills</li>
+    </ul>
+
+    <h2>Course Contents (Detailed Explanation)</h2>
+
+    <h3>1. Project Planning</h3>
+    <ul>
+        <li>Selecting a project topic based on interest and feasibility</li>
+        <li>Defining project objectives and scope</li>
+        <li>Requirement analysis: functional and non-functional requirements</li>
+        <li>Creating a project timeline and task allocation</li>
+    </ul>
+
+    <h3>2. System/Software Design</h3>
+    <ul>
+        <li>Designing the system architecture</li>
+        <li>Creating flowcharts, UML diagrams, or wireframes</li>
+        <li>Database design (if applicable)</li>
+        <li>User interface design and multimedia integration (if applicable)</li>
+    </ul>
+
+    <h3>3. Implementation / Development</h3>
+    <ul>
+        <li>Writing code for software projects (C, C++, Java, PHP, Python, or C#)</li>
+        <li>Developing multimedia, web, or interactive applications</li>
+        <li>Integrating different modules and components</li>
+        <li>Following coding standards and best practices</li>
+    </ul>
+
+    <h3>4. Testing and Debugging</h3>
+    <ul>
+        <li>Testing individual modules and full system</li>
+        <li>Identifying and fixing bugs</li>
+        <li>Ensuring functionality, performance, and usability</li>
+        <li>Performing user acceptance testing (if applicable)</li>
+    </ul>
+
+    <h3>5. Documentation</h3>
+    <ul>
+        <li>Preparing a project report including:
+            <ul>
+                <li>Title and abstract</li>
+                <li>Requirement specifications</li>
+                <li>System design and architecture</li>
+                <li>Implementation details</li>
+                <li>Testing results</li>
+                <li>Conclusion and future enhancements</li>
+            </ul>
+        </li>
+        <li>Creating user manuals or technical documentation (if required)</li>
+    </ul>
+
+    <h3>6. Presentation and Demonstration</h3>
+    <ul>
+        <li>Preparing slides or multimedia presentation</li>
+        <li>Demonstrating the working project</li>
+        <li>Explaining project design, implementation, and outcomes</li>
+        <li>Answering questions and receiving feedback</li>
+    </ul>
+
+    <h3>7. Practical Applications and Examples</h3>
+    <ul>
+        <li>Mini-projects could include:
+            <ul>
+                <li>Student or employee management system</li>
+                <li>Online store or e-commerce website</li>
+                <li>Interactive multimedia learning module</li>
+                <li>Small-scale mobile or web application</li>
+                <li>Data analysis or visualization project</li>
+                <li>Game or VR/AR-based application</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Teaching Methodology</h2>
+    <ul>
+        <li>Mentoring and guidance from instructors</li>
+        <li>Group or individual project development</li>
+        <li>Regular progress reviews and feedback sessions</li>
+        <li>Hands-on development with real tools and programming environments</li>
+    </ul>
+
+    <h2>Assessment Methods</h2>
+    <ul>
+        <li>Evaluation based on project design, implementation, and functionality</li>
+        <li>Project documentation and report quality</li>
+        <li>Presentation and demonstration performance</li>
+        <li>Teamwork, innovation, and problem-solving approach</li>
+    </ul>
+`}
+
+
+};
+
+function loadCourse(id){
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "right-content";
+    wrapper.style.animation = "slideFadeIn 0.6s ease forwards";
+
+    if(data[id].content){
+        wrapper.innerHTML = `<h2>${data[id].title}</h2>${data[id].content}`;
+    } else {
+        let html = `<h2>${data[id].title}</h2><ul>`;
+        data[id].topics.forEach(t => html += `<li>${t}</li>`);
+        html += `</ul>`;
+        wrapper.innerHTML = html;
+    }
+
+    content.appendChild(wrapper);
+}
+</script>
+
+
+<!------------------------------- Course---end small----------------------------------------->
+
+<!--------------------------New Model course  list------------------------------------->
+
+
+
+
+
+
+<!------------------------------End------------------------------>
+
+
+
+
+
+
+
+
+
+
+<!---------------------------Footer Section-------------------------------->
+
+
+<!---------------------------Footer Section-------------------------------->
+
+<style>
+    /*-----*/
+    html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+    /*-----*/
+
+footer {
+    width: 100%;
+    background: #0d2346;
+    color: #ffffff;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+ margin-bottom: 0;
+  padding-bottom: 0;
+  display: block;   
+}
+
+h1{
+    background-color:  #0d2346;
+}
+.footer-container span{
+    
+    color: #4fc3ff;
+}
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(320px, 2fr)
+        minmax(160px, 1fr)
+        minmax(220px, 1.2fr)
+        minmax(250px, 1.2fr);
+
+    gap: 45px;
+
+    padding: 55px 35px 45px;
+}
+
+
+/* =========================================================
+   INFORMATION TECHNOLOGY
+========================================================= */
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+/*---
+.footer-logo h1 span {
+    color: #4fc3ff;
+}--*/
+
+.footer-logo p {
+    color: #d9e1ec;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 560px;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+.footer-column h3 {
+    position: relative;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+}
+
+
+/* Small line under heading */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: #4fc3ff;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES
+========================================================= */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #d9e1ec;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4fc3ff;
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   GET IN TOUCH
+========================================================= */
+
+.contact p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #d9e1ec;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 16px;
+}
+
+.contact p i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: #ffd54f;
+
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.social {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #223b63;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.social a:hover {
+    background: #4fc3ff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(79, 195, 255, 0.35);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    background: #08162f;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    padding: 18px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #cbd3df;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.footer-bottom strong {
+    color: #4fc3ff;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 45px 30px;
+    }
+
+    .footer-logo {
+        grid-column: span 3;
+    }
+
+    .footer-logo p {
+        max-width: 900px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding: 40px 25px;
+    }
+
+    .footer-logo {
+        grid-column: span 2;
+
+        text-align: center;
+    }
+
+    .footer-logo p {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-column h3::after {
+        left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 20px;
+    }
+
+    .footer-logo {
+        grid-column: span 1;
+
+        text-align: center;
+    }
+
+    .footer-logo h1 {
+        font-size: 26px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+
+    .contact p {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: 16px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .footer-container {
+        padding: 30px 15px;
+    }
+
+    .footer-logo h1 {
+        font-size: 23px;
+    }
+
+    .footer-column h3 {
+        font-size: 19px;
+    }
+
+    .social a {
+        width: 38px;
+        height: 38px;
+    }
+}
+</style>
+<!-------------------Footer------------------------->
+
+<!---------------------------Footer Section-------------------------------->
+<footer> <div class="footer-container"> 
+  <div class="footer-logo"> <h1>Information <span>Technology</span></h1> 
+    <p>
+       Empowering innovation through modern technology, software development, web applications, networking, database management, cybersecurity, cloud computing, and digital transformation.
+
+We focus on creating reliable, efficient, and user-friendly technology solutions that help individuals and businesses achieve their goals.
+
+Our approach combines creativity, technical knowledge, and modern tools to develop smart digital solutions for today's fast-changing world. 
+    
+    </p> 
+      <div class="social"> 
+        <a><i class="fab fa-linkedin-in"></i></a> 
+        <a><i class="fab fa-facebook-f"></i></a> 
+        <a><i class="fab fa-x-twitter"></i></a> 
+        <a><i class="fab fa-whatsapp"></i></a> 
+      </div> </div> 
+      
+      <div class="footer-column"> 
+        <h3>Quick Links</h3> 
+        <ul> 
+        <li><a href="Home.html">Home</a></li> 
+        <li><a href="About.html">About </a></li> 
+        <li><a href="Services.html">Services</a></li> 
+        <li><a href="Contact.html">contact</a></li> 
+        <li><a href="Course.html">course</a></li> 
+        
+      </ul> 
+    </div> 
+    <div class="footer-column"> 
+      <h3>Our Services</h3> 
+      <ul> 
+        <li><a>Web Development</a></li> 
+        <li><a>Software Development</a></li> 
+        <li><a>Mobile App Development</a></li> 
+        <li><a>UI / UX Design</a></li> 
+        <li><a>Cloud Solutions</a></li> 
+      </ul> 
+    </div> 
+    <div class="footer-column contact"> 
+      <h3>Get In Touch</h3> 
+      <p><i class="fas fa-location-dot"></i> Dubai, United Arab Emirates </p> 
+      <p><i class="fas fa-phone"></i> +971 0527442274 </p> 
+      <p><i class="fas fa-envelope"></i> zeerintaj1712@gmail.com </p> 
+    </div> 
+  </div> 
+  <div class="footer-bottom"> © 2026 Information Technology. All Rights Reserved. </div> 
+</footer>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
